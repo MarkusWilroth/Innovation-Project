@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5050400885428205431}
   - component: {fileID: 9193690611625465164}
   - component: {fileID: -8609658051291682575}
+  - component: {fileID: -4446604798657771381}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -109,3 +110,24 @@ MonoBehaviour:
   minTime: 1.5
   maxTime: 3
   moveSpeed: 0.03
+--- !u!114 &-4446604798657771381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950510817431393220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9383456b1685a464883339aec725128d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trash: {fileID: 4240932111651486788, guid: 8ac42222425acf1408b7cc78df0f8b3e, type: 3}
+  debris: {fileID: 7530579679269446600, guid: b27de6a87251f0c489c29dd01e87d9c5, type: 3}
+  dropMin: 3
+  dropMax: 6
+  bumpMin: 20
+  bumpMax: 50
+  goodDropRatio: 70
+  roadMin: -13
+  roadMax: 13
