@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 103319344}
   - component: {fileID: 103319343}
   m_Layer: 0
-  m_Name: Trashcan
+  m_Name: Paper Trashcan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 824017562}
   - component: {fileID: 824017561}
   m_Layer: 0
-  m_Name: Trashcan (1)
+  m_Name: Glass Trashcan (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,8 +430,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c46bedc732b6a4789a01f94e03ef83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashBottle: {fileID: 2553206293674270935, guid: 9540b6d6f8b612f41a443e09d40c39c1,
-    type: 3}
+  trash:
+  - {fileID: 2553206293674270935, guid: 9540b6d6f8b612f41a443e09d40c39c1, type: 3}
+  - {fileID: 1036439842854879839, guid: d2ba99f8a6d6e1e4fb80daf9341b7d31, type: 3}
+  - {fileID: 4375400257210747537, guid: 69ddc0f2ad96cb8449e37c2cc7f1357f, type: 3}
   startDelay: 2
   spawnInterval: 1.5
 --- !u!4 &938960880
@@ -636,7 +638,7 @@ GameObject:
   - component: {fileID: 1528688269}
   - component: {fileID: 1528688268}
   m_Layer: 0
-  m_Name: Trashcan (2)
+  m_Name: plastic Trashcan (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,7 +886,7 @@ PrefabInstance:
     - target: {fileID: 6018420000185828792, guid: d23546ae993e45446bbce1525705961c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 6018420000185828792, guid: d23546ae993e45446bbce1525705961c,
         type: 3}

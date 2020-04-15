@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnTrash : MonoBehaviour
 {
 
-    public GameObject trashBottle;
+    public GameObject[] trash;
+    int x;
     float randomXSpawn;
     float randomZSpawn;
     public float startDelay = 2.0f;
@@ -29,6 +30,8 @@ public class SpawnTrash : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(randomXSpawn, 5, randomZSpawn);
 
-        Instantiate(trashBottle, spawnPos, trashBottle.transform.rotation);
+        x = Random.Range(0, trash.Length);
+
+        Instantiate(trash[x], spawnPos, trash[x].transform.rotation);
     }
 }
