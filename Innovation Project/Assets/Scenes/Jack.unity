@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 103319345}
   - component: {fileID: 103319344}
   - component: {fileID: 103319343}
+  - component: {fileID: 103319347}
   m_Layer: 0
   m_Name: Paper Trashcan
   m_TagString: Untagged
@@ -214,6 +215,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &103319347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103319342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fb96c35ac55a84fba796a2cc8d076c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &185015598
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +333,7 @@ GameObject:
   - component: {fileID: 824017563}
   - component: {fileID: 824017562}
   - component: {fileID: 824017561}
+  - component: {fileID: 824017565}
   m_Layer: 0
   m_Name: Glass Trashcan (1)
   m_TagString: Untagged
@@ -401,6 +415,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &824017565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824017560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fb96c35ac55a84fba796a2cc8d076c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &938960878
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +663,9 @@ GameObject:
   - component: {fileID: 1528688270}
   - component: {fileID: 1528688269}
   - component: {fileID: 1528688268}
+  - component: {fileID: 1528688272}
   m_Layer: 0
-  m_Name: plastic Trashcan (2)
+  m_Name: Plastic Trashcan (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,6 +745,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!114 &1528688272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528688267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fb96c35ac55a84fba796a2cc8d076c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &961859403857068279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -932,6 +971,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018420000185828794, guid: d23546ae993e45446bbce1525705961c,
+        type: 3}
+      propertyPath: throwForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018420000185828794, guid: d23546ae993e45446bbce1525705961c,
+        type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6018420000185828795, guid: d23546ae993e45446bbce1525705961c,
         type: 3}
