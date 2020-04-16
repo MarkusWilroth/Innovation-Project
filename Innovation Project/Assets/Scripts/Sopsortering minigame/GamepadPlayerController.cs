@@ -7,8 +7,11 @@ public class GamepadPlayerController : MonoBehaviour
     // Start is called before the first frame update
     GameObject hold;
     Rigidbody trashBody;
+    Rigidbody rigidbody;
+    bool activeCooldown = false;
     public bool holding = false;
     public float speed;
+    float dashSpeed = 5f;
     float leftAxis;
     float forwardAxis;
     public float throwForce;
@@ -17,7 +20,7 @@ public class GamepadPlayerController : MonoBehaviour
     public Vector3 direction;
     void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -43,6 +46,12 @@ public class GamepadPlayerController : MonoBehaviour
             
             Throw();
         }
+        if (!activeCooldown  && Input.GetButtonDown("A"))
+        {
+            activeCooldown = true;
+            Invoke("Cooldown", 1f);
+            Dash();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,6 +65,11 @@ public class GamepadPlayerController : MonoBehaviour
         }
     }
 
+    private void Cooldown()
+    {
+        activeCooldown = false;
+    }
+
     private void Throw()
     {
         hold.transform.parent = null;
@@ -64,5 +78,11 @@ public class GamepadPlayerController : MonoBehaviour
         
         
         hold = null;
+    }
+
+    private void Dash()
+    {
+        direction = new Vector3(VelocityX.x, 0, VelocityZ.z);
+        rigidbody.AddForce(direction * dashSpeed, ForceMode.Impulse);
     }
 }
