@@ -6,15 +6,18 @@ public class GamepadPlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject hold;
+    GameObject targetPlayer;
     Rigidbody trashBody;
     Rigidbody rigidbody;
-    bool activeCooldown = false;
+    bool keepGoing;
+    public bool activeCooldown = false;
     public bool holding = false;
     public float speed;
+    Vector3 dropDirection;
     float dashSpeed = 5f;
     float leftAxis;
     float forwardAxis;
-    public float throwForce;
+    float throwForce = 5f;
     Vector3 VelocityX;
     Vector3 VelocityZ;
     public Vector3 direction;
@@ -40,7 +43,7 @@ public class GamepadPlayerController : MonoBehaviour
         {
             hold.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         }
-        if (holding && Input.GetButtonDown("X"))
+        if (holding && Input.GetButtonDown("X") && (leftAxis == 1 || forwardAxis == 1))
         {
             holding = false;
             
@@ -63,6 +66,18 @@ public class GamepadPlayerController : MonoBehaviour
             collision.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
             collision.transform.parent = transform;
         }
+        else if (collision.gameObject.CompareTag("Player") && holding)
+        {
+            targetPlayer = collision.gameObject;
+            keepGoing = targetPlayer.GetComponent<GamepadPlayerController>().activeCooldown;
+
+            if (keepGoing)
+            {
+                dropDirection = gameObject.transform.position - collision.gameObject.transform.position;
+                holding = false;
+                Drop();
+            }
+        }
     }
 
     private void Cooldown()
@@ -70,10 +85,20 @@ public class GamepadPlayerController : MonoBehaviour
         activeCooldown = false;
     }
 
+    private void Drop()
+    {
+        hold.transform.parent = null;
+        trashBody = hold.GetComponent<Rigidbody>();
+        dropDirection.y = 1;
+        trashBody.AddForce(dropDirection * throwForce, ForceMode.Impulse);
+        hold = null;
+        targetPlayer = null;
+    }
     private void Throw()
     {
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
+        direction.y = 1;
         trashBody.AddForce(direction * throwForce, ForceMode.Impulse);
         
         
