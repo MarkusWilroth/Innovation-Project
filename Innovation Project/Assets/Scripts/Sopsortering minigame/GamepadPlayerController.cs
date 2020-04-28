@@ -9,14 +9,15 @@ public class GamepadPlayerController : MonoBehaviour
     GameObject targetPlayer;
     Rigidbody trashBody;
     Rigidbody rigidbody;
-    bool keepGoing;
+    public bool keepGoing;
     public bool activeCooldown = false;
     public bool holding = false;
-    public float speed;
+    public float speed = 5f;
+    public int player;
     Vector3 dropDirection;
     float dashSpeed = 5f;
-    float leftAxis;
-    float forwardAxis;
+    public float leftAxis;
+    public float forwardAxis;
     float throwForce = 5f;
     Vector3 VelocityX;
     Vector3 VelocityZ;
@@ -25,12 +26,16 @@ public class GamepadPlayerController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
     }
-
+   
+    public void ControllToPlayer(int number)
+    {
+        player = number;
+    }
     // Update is called once per frame
     void Update()
     {
-        leftAxis = Input.GetAxisRaw("JoyHorizontal");
-        forwardAxis = Input.GetAxisRaw("JoyVertical");
+        leftAxis = Input.GetAxisRaw(player + "JoyHorizontal");
+        forwardAxis = Input.GetAxisRaw(player + "JoyVertical");
 
         transform.Translate(Vector3.forward * Time.deltaTime * forwardAxis * speed);
         transform.Translate(Vector3.right * Time.deltaTime * leftAxis * speed);
@@ -43,15 +48,15 @@ public class GamepadPlayerController : MonoBehaviour
         {
             hold.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         }
-        if (holding && Input.GetButtonDown("X") && (leftAxis == 1 || forwardAxis == 1))
+        if (holding && Input.GetButtonDown(player + "X") && (leftAxis != 0 || forwardAxis != 0 ))
         {
-            holding = false;
+            
             
             Throw();
         }
-        if (!activeCooldown  && Input.GetButtonDown("A"))
+        if (!activeCooldown  && Input.GetButtonDown(player + "A"))
         {
-            activeCooldown = true;
+           
             Invoke("Cooldown", 1f);
             Dash();
         }
@@ -74,7 +79,7 @@ public class GamepadPlayerController : MonoBehaviour
             if (keepGoing)
             {
                 dropDirection = gameObject.transform.position - collision.gameObject.transform.position;
-                holding = false;
+                
                 Drop();
             }
         }
@@ -87,6 +92,7 @@ public class GamepadPlayerController : MonoBehaviour
 
     private void Drop()
     {
+        holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
         dropDirection.y = 1;
@@ -96,6 +102,7 @@ public class GamepadPlayerController : MonoBehaviour
     }
     private void Throw()
     {
+        holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
         direction.y = 1;
@@ -107,6 +114,7 @@ public class GamepadPlayerController : MonoBehaviour
 
     private void Dash()
     {
+        activeCooldown = true;
         direction = new Vector3(VelocityX.x, 0, VelocityZ.z);
         rigidbody.AddForce(direction * dashSpeed, ForceMode.Impulse);
     }

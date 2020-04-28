@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GamepadPlayer2Controller : MonoBehaviour
 {
-    bool test;
-    float leftAxis;
-    float forwardAxis;
+   
+    
+    // Start is called before the first frame update
     void Start()
     {
 
@@ -15,11 +15,16 @@ public class GamepadPlayer2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leftAxis = Input.GetAxisRaw("JoyHorizontal2");
-        forwardAxis = Input.GetAxisRaw("JoyVertical2");
-
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardAxis);
-        transform.Translate(Vector3.right * Time.deltaTime * leftAxis);
+        if (Input.GetButtonDown("2A"))
+        {
+            Debug.Log("This happens");
+            gameObject.AddComponent(typeof(GamepadPlayerController));
+            gameObject.GetComponent<GamepadPlayerController>().ControllToPlayer(2);
+            Destroy(this);
+        }
     }
+
+
+
 }
 

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GamepadPlayer3Controller : MonoBehaviour
 {
+  
+    
     // Start is called before the first frame update
-    float leftAxis;
-    float forwardAxis;
     void Start()
     {
 
@@ -15,10 +15,15 @@ public class GamepadPlayer3Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leftAxis = Input.GetAxisRaw("JoyHorizontal3");
-        forwardAxis = Input.GetAxisRaw("JoyVertical3");
-
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardAxis);
-        transform.Translate(Vector3.right * Time.deltaTime * leftAxis);
+        if (Input.GetButtonDown("3A"))
+        {
+            Debug.Log("This happens");
+            gameObject.AddComponent(typeof(GamepadPlayerController));
+            gameObject.GetComponent<GamepadPlayerController>().ControllToPlayer(3);
+            Destroy(this);
+        }
     }
+
+
+
 }
