@@ -13,12 +13,15 @@ public class GamepadPlayerController : MonoBehaviour
     public bool activeCooldown = false;
     public bool holding = false;
     public float speed = 5f;
+    float dashSpeed = 5f;
+    float xBoundary = 8.5f;
+    float zBoundary = 7f;
+    float lowZBoundary = -4f;
+    float throwForce = 5f;
     public int player;
     Vector3 dropDirection;
-    float dashSpeed = 5f;
     public float leftAxis;
     public float forwardAxis;
-    float throwForce = 5f;
     Vector3 VelocityX;
     Vector3 VelocityZ;
     public Vector3 direction;
@@ -40,6 +43,7 @@ public class GamepadPlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * forwardAxis * speed);
         transform.Translate(Vector3.right * Time.deltaTime * leftAxis * speed);
 
+        BoundaryMovement();
         VelocityZ.z =  forwardAxis * speed;
         VelocityX.x =  leftAxis * speed;
         direction = new Vector3(VelocityX.x, 0.5f, VelocityZ.z);
@@ -90,6 +94,25 @@ public class GamepadPlayerController : MonoBehaviour
         activeCooldown = false;
     }
 
+    private void BoundaryMovement()
+    {
+        if (transform.position.x > xBoundary)
+        {
+            transform.position = new Vector3(xBoundary, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < -xBoundary)
+        {
+            transform.position = new Vector3(-xBoundary, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.z > zBoundary)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zBoundary);
+        }
+        else if (transform.position.z < lowZBoundary)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, lowZBoundary);
+        }
+    }
     private void Drop()
     {
         holding = false;

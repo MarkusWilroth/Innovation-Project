@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6018420000185828790}
   - component: {fileID: 6018420000185828791}
   - component: {fileID: 6018420000185828795}
-  - component: {fileID: 6018420000185828794}
+  - component: {fileID: 373367901}
   m_Layer: 0
   m_Name: PlayerOne
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,9 +109,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6018420000185828794
+--- !u!114 &373367901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6018420000185828788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0146f34ad8bb247967bea31cf6bb1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 07815d58ff5acfc48ab1a1bf8ea0127c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
