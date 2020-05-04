@@ -5,13 +5,13 @@ using UnityEngine;
 public class GamepadPlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    Animator animator;
     GameObject hold;
     GameObject targetPlayer;
     Rigidbody trashBody;
     Rigidbody rigidbody;
     AudioSource playerAudio;
-    public AudioClip jumpSound;
-    public AudioClip tackleSound;
+    Sounds sounds;
     public bool keepGoing;
     public bool activeCooldown = false;
     public bool holding = false;
@@ -32,8 +32,11 @@ public class GamepadPlayerController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         playerAudio = GetComponent<AudioSource>();
+        sounds = GetComponent<Sounds>();
+        animator = GetComponent<Animator>();
+
     }
-   
+
     public void ControllToPlayer(int number)
     {
         player = number;
@@ -44,27 +47,37 @@ public class GamepadPlayerController : MonoBehaviour
         leftAxis = Input.GetAxisRaw(player + "JoyHorizontal");
         forwardAxis = Input.GetAxisRaw(player + "JoyVertical");
 
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardAxis * speed);
-        transform.Translate(Vector3.right * Time.deltaTime * leftAxis * speed);
+        Vector3 movement = new Vector3(leftAxis, 0.0f, forwardAxis);
+
+      
+        transform.Translate(movement * Time.deltaTime *  speed, Space.World);
 
         BoundaryMovement();
-        VelocityZ.z =  forwardAxis * speed;
-        VelocityX.x =  leftAxis * speed;
+        VelocityZ.z = forwardAxis * speed;
+        VelocityX.x = leftAxis * speed;
         direction = new Vector3(VelocityX.x, 0.5f, VelocityZ.z);
-
+        if (leftAxis != 0 || forwardAxis != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
+            animator.SetFloat("movement", 1f);
+        }
+        else
+        {
+            animator.SetFloat("movement", 0f);
+        }
         if (holding)
         {
             hold.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         }
-        if (holding && Input.GetButtonDown(player + "X") && (leftAxis != 0 || forwardAxis != 0 ))
+        if (holding && Input.GetButtonDown(player + "X") && (leftAxis != 0 || forwardAxis != 0))
         {
-            
-            
+
+
             Throw();
         }
-        if (!activeCooldown  && Input.GetButtonDown(player + "A"))
+        if (!activeCooldown && Input.GetButtonDown(player + "A"))
         {
-           
+
             Invoke("Cooldown", 1f);
             Dash();
         }
@@ -72,7 +85,7 @@ public class GamepadPlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Trash") && !holding)
+        if (collision.gameObject.CompareTag("Trash") && !holding)
         {
             holding = true;
             hold = collision.gameObject;
@@ -83,11 +96,13 @@ public class GamepadPlayerController : MonoBehaviour
         {
             targetPlayer = collision.gameObject;
             keepGoing = targetPlayer.GetComponent<GamepadPlayerController>().activeCooldown;
+            playerAudio.PlayOneShot(sounds.knuff, 1f);
 
             if (keepGoing)
             {
+
                 dropDirection = gameObject.transform.position - collision.gameObject.transform.position;
-                
+
                 Drop();
             }
         }
@@ -129,20 +144,22 @@ public class GamepadPlayerController : MonoBehaviour
     }
     private void Throw()
     {
+
         holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
         direction.y = 1;
         trashBody.AddForce(direction * throwForce, ForceMode.Impulse);
-        
-        
+        playerAudio.PlayOneShot(sounds.kasta, 1f);
+
+
         hold = null;
     }
 
     private void Dash()
     {
         activeCooldown = true;
-        playerAudio.PlayOneShot(tackleSound, 10f);
+
         direction = new Vector3(VelocityX.x, 0, VelocityZ.z);
         rigidbody.AddForce(direction * dashSpeed, ForceMode.Impulse);
     }

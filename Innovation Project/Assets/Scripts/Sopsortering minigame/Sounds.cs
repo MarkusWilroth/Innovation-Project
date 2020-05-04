@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioClip knuff;
+    public AudioClip Traffa;
+    public AudioClip fel;
+    public AudioClip kasta;
+    public AudioClip nyFlaska;
+    public AudioClip countDown;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
