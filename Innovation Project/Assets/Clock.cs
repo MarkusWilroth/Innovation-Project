@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Clock : MonoBehaviour
 {
     double secound = 1f;
-    int time = 60;
+    int time = 4;
     Text countDown;
     Sounds sounds;
     AudioSource clock;
@@ -34,7 +34,7 @@ public class Clock : MonoBehaviour
         }
         if (time == 3)
         {
-            clock.PlayOneShot(sounds.countDown, 1f);
+            clock.PlayOneShot(sounds.countDown, 0.01f);
         }
     }
 }
