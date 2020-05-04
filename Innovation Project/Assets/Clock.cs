@@ -8,10 +8,14 @@ public class Clock : MonoBehaviour
     double secound = 1f;
     int time = 60;
     Text countDown;
+    Sounds sounds;
+    AudioSource clock;
     // Start is called before the first frame update
     void Start()
     {
         countDown = GetComponent<Text>();
+        sounds = GetComponent<Sounds>();
+        clock = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,10 @@ public class Clock : MonoBehaviour
         {
             secound = 1f;
             time--;
+        }
+        if (time == 3)
+        {
+            clock.PlayOneShot(sounds.countDown, 1f);
         }
     }
 }

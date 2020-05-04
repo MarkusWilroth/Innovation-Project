@@ -3,7 +3,13 @@ guid: 26fbd7e75fe8aaf4aaf0ff965cc280de
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - knuff: {fileID: 8300000, guid: b38ee5fc5d6d79d4ea0e53d021af3209, type: 3}
+  - Traffa: {fileID: 8300000, guid: 7b8518adcac114a41ba44c74caf5760c, type: 3}
+  - fel: {fileID: 8300000, guid: df6dbc2f21441b54d9dffbd1029c6b54, type: 3}
+  - kasta: {fileID: 8300000, guid: 303fea12f4f2c914f89b6f85ee16d181, type: 3}
+  - nyFlaska: {fileID: 8300000, guid: 5d6d936351d7ff0459ffdf791b1c6a8f, type: 3}
+  - countDown: {fileID: 8300000, guid: bd5218ede7e0fdf4b8332ed0f5173878, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
