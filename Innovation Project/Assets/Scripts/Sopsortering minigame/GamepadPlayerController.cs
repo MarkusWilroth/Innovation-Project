@@ -9,6 +9,9 @@ public class GamepadPlayerController : MonoBehaviour
     GameObject targetPlayer;
     Rigidbody trashBody;
     Rigidbody rigidbody;
+    AudioSource playerAudio;
+    public AudioClip jumpSound;
+    public AudioClip tackleSound;
     public bool keepGoing;
     public bool activeCooldown = false;
     public bool holding = false;
@@ -28,6 +31,7 @@ public class GamepadPlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        playerAudio = GetComponent<AudioSource>();
     }
    
     public void ControllToPlayer(int number)
@@ -138,6 +142,7 @@ public class GamepadPlayerController : MonoBehaviour
     private void Dash()
     {
         activeCooldown = true;
+        playerAudio.PlayOneShot(tackleSound, 10f);
         direction = new Vector3(VelocityX.x, 0, VelocityZ.z);
         rigidbody.AddForce(direction * dashSpeed, ForceMode.Impulse);
     }
