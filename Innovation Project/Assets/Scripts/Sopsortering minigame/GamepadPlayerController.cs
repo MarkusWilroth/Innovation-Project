@@ -71,8 +71,6 @@ public class GamepadPlayerController : MonoBehaviour
         }
         if (holding && Input.GetButtonDown(player + "X") && (leftAxis != 0 || forwardAxis != 0))
         {
-
-
             Throw();
         }
         if (!activeCooldown && Input.GetButtonDown(player + "A"))
