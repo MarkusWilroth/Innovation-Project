@@ -6,6 +6,8 @@ public class SpawnTrash : MonoBehaviour
 {
 
     public GameObject[] trash;
+    AudioSource aS;
+    Sounds sound;
     int x;
     float randomXSpawn;
     float randomZSpawn;
@@ -15,6 +17,8 @@ public class SpawnTrash : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Spawn", startDelay, spawnInterval);
+        aS = GetComponent<AudioSource>();
+        sound = GetComponent<Sounds>();
     }
 
     // Update is called once per frame
@@ -27,7 +31,7 @@ public class SpawnTrash : MonoBehaviour
     {
         randomXSpawn = Random.Range(-4f, 4f);
         randomZSpawn = Random.Range(-4f, 4f);
-
+        aS.PlayOneShot(sound.nyFlaska, 0.2f);
         Vector3 spawnPos = new Vector3(randomXSpawn, 5, randomZSpawn);
 
         x = Random.Range(0, trash.Length);

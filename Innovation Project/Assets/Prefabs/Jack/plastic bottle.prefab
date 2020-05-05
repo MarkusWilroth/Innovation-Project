@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4543400286382977019}
   - component: {fileID: 6736209220273359637}
   - component: {fileID: 474800223685356662}
+  - component: {fileID: -8457532179554228451}
   m_Layer: 0
   m_Name: plastic bottle
   m_TagString: Trash
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3258d010a75e4074f8deae402d45d07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8457532179554228451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2553206293674270935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8ce99e6c0a3754d8a94a073d8ca523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holder: 0

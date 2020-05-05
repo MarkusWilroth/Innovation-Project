@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Clock : MonoBehaviour
 {
     double secound = 1f;
-    int time = 4;
+    int time = 30;
     Text countDown;
     Sounds sounds;
     AudioSource clock;

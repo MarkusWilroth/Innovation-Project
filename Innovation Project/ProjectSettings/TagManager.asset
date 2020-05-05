@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameObjects
   - Trash
+  - Trashcan
   layers:
   - Default
   - TransparentFX
