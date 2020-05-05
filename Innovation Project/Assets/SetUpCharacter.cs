@@ -9,8 +9,10 @@ public class SetUpCharacter : MonoBehaviour
     private Material limb, skin, armor, component;
     private Color[] colors;
     public int playerNr;
-    private int armorCounter, skinCounter, limbCounter, compCounter;
-    float rotateCounter;
+    private int armorCounter, skinCounter, limbCounter, compCounter, changeCounter;
+    public int resetTime;
+    private float verticalAxis, axisValue, changeTimer;
+    private bool isChangeable;
 
     public bool isReady;
     private ThingToChange toChange;
@@ -40,21 +42,87 @@ public class SetUpCharacter : MonoBehaviour
 
         RotateToCamera();
 
-        toChange = ThingToChange.rotate;
+
+        toChange = ThingToChange.armorColor;
         playerNr = 1;
+        isChangeable = true;
+        resetTime = 1;
+
+        axisValue = Input.GetAxisRaw(playerNr + "JoyVertical");
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown(playerNr+"L1"))
+        if (!isReady)
         {
-            AlterCharacter(-1);
-        } else if (Input.GetButtonDown(playerNr + "R1"))
+            if (Input.GetButtonDown(playerNr + "L1"))
+            {
+                AlterCharacter(-1);
+            }
+            else if (Input.GetButtonDown(playerNr + "R1"))
+            {
+                AlterCharacter(1);
+            }
+
+            changeTimer -= Time.deltaTime;
+            if (changeTimer <= 0)
+            {
+                isChangeable = true;
+            }
+
+            if (isChangeable)
+            {
+                verticalAxis = Input.GetAxisRaw(playerNr + "JoyVertical");
+
+                if (verticalAxis > axisValue)
+                {
+                    axisValue = verticalAxis;
+                    SwitchToChange(1);
+                    isChangeable = false;
+                    changeTimer = resetTime;
+                }
+                else if (verticalAxis < axisValue)
+                {
+                    axisValue = verticalAxis;
+                    SwitchToChange(-1);
+                    isChangeable = false;
+                    changeTimer = resetTime;
+                }
+            }
+        }
+        
+
+        if (Input.GetButtonDown(playerNr + "A"))
         {
-            AlterCharacter(1);
-        } 
+            if (isReady)
+            {
+                isReady = false;
+            } else
+            {
+                isReady = true;
+                GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
+            }
+            
+        }
     }
 
+    private void SwitchToChange(int modifier)
+    {
+        if (modifier > 0)
+        {
+            toChange++;
+        } else
+        {
+            toChange--;
+        }
+        if (toChange > ThingToChange.rotate)
+        {
+            toChange = ThingToChange.armorColor;
+        } else if (toChange < ThingToChange.armorColor)
+        {
+            toChange = ThingToChange.rotate;
+        }
+    }
     private void AlterCharacter(int modifier)
     {
         switch (toChange)
@@ -123,14 +191,11 @@ public class SetUpCharacter : MonoBehaviour
     {
         GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         transform.LookAt(MainCamera.transform);
-        rotateCounter = transform.rotation.y;
     }
     
 }
 
 /* ToDo:
- * - Rotera till kameran
  * - Ha en bestämd kontroller
- * - Ha bestämda färger
  * - Spara karaktären till WorldScript
  */
