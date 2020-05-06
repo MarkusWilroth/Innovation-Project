@@ -13,6 +13,8 @@ public class SetUpCharacter : MonoBehaviour
     public int resetTime;
     private float verticalAxis, axisValue, changeTimer;
     private bool isChangeable;
+    public GameObject lblReady;
+    private Vector2 readyPos;
 
     public bool isReady;
     private ThingToChange toChange;
@@ -41,14 +43,22 @@ public class SetUpCharacter : MonoBehaviour
         limb.color = colors[Random.Range(0, colors.Length)];
 
         RotateToCamera();
-
-
+        
         toChange = ThingToChange.armorColor;
-        playerNr = 1;
         isChangeable = true;
         resetTime = 1;
 
         axisValue = Input.GetAxisRaw(playerNr + "JoyVertical");
+
+        lblReady = Instantiate(lblReady);
+        readyPos = new Vector2(transform.position.x, transform.position.y);
+        readyPos.x -= 590;
+        readyPos.y += 80;
+
+        lblReady.transform.position = readyPos;
+        lblReady.transform.SetParent(transform.parent.transform, false);
+
+        lblReady.SetActive(false);
     }
 
     private void Update()
@@ -94,13 +104,16 @@ public class SetUpCharacter : MonoBehaviour
 
         if (Input.GetButtonDown(playerNr + "A"))
         {
+            Debug.Log("PlayerNr: " + playerNr);
             if (isReady)
             {
                 isReady = false;
+                lblReady.SetActive(false);
             } else
             {
                 isReady = true;
                 GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
+                lblReady.SetActive(true);
             }
             
         }

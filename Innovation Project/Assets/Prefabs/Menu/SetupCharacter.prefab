@@ -491,6 +491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNr: 0
   resetTime: 0
+  lblReady: {fileID: 2035269858731707763, guid: ab56bd876cfebb94d9c843b2c2a0a761,
+    type: 3}
   isReady: 0
 --- !u!114 &2677193934820263848
 MonoBehaviour:
@@ -520,6 +522,10 @@ MonoBehaviour:
   points: 0
   gold: 0
   playerNr: 0
+  limb: {fileID: 0}
+  skin: {fileID: 0}
+  armor: {fileID: 0}
+  component: {fileID: 0}
 --- !u!1 &2914551692096956331
 GameObject:
   m_ObjectHideFlags: 0
