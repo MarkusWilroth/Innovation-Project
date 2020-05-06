@@ -789,6 +789,7 @@ MonoBehaviour:
     type: 3}
   LblReady: {fileID: 2035269858731707763, guid: ab56bd876cfebb94d9c843b2c2a0a761,
     type: 3}
+  MasterMenu: {fileID: 154535280}
 --- !u!1 &797443141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,8 +2210,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 154535281}
-        m_MethodName: GetToLevelSelect
+      - m_Target: {fileID: 612247032}
+        m_MethodName: BtnCont
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

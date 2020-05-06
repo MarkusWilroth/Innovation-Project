@@ -104,7 +104,6 @@ public class SetUpCharacter : MonoBehaviour
 
         if (Input.GetButtonDown(playerNr + "A"))
         {
-            Debug.Log("PlayerNr: " + playerNr);
             if (isReady)
             {
                 isReady = false;
@@ -113,9 +112,9 @@ public class SetUpCharacter : MonoBehaviour
             {
                 isReady = true;
                 GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
+                RotateToCamera();
                 lblReady.SetActive(true);
             }
-            
         }
     }
 

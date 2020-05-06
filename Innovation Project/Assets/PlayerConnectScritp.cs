@@ -8,15 +8,19 @@ public class PlayerConnectScritp : MonoBehaviour
     public GameObject SetupCharacter;
     public GameObject LblPressToJoin;
     public GameObject LblReady;
+    public GameObject MasterMenu;
 
     private Vector3[] characterSpawnPos = new Vector3[4];
     private GameObject[] pressHolder;
     private GameObject holder;
+    private List<GameObject> playerList;
 
     private Vector2 lblPos;
+    private bool isAllReady;
 
     private void Start()
     {
+        playerList = new List<GameObject>();
         pressHolder = new GameObject[characterSpawnPos.Length];
         for (int i = 0; i < characterSpawnPos.Length; i++)
         {
@@ -45,13 +49,40 @@ public class PlayerConnectScritp : MonoBehaviour
         }
     }
 
-    private void SpawnCharacter(int player)
+    private void SpawnCharacter(int player) //Kommer behöva föra om denna ifall vi ska kunna disconnecta kontroller
     {
         holder = Instantiate(SetupCharacter);
-        holder.transform.position = characterSpawnPos[player - 1];
+        holder.transform.position = characterSpawnPos[playerList.Count];
         holder.transform.SetParent(gameObject.transform, false);
         holder.GetComponent<SetUpCharacter>().playerNr = player;
 
-        pressHolder[player - 1].SetActive(false);
+        pressHolder[playerList.Count].SetActive(false);
+        playerList.Add(holder);
+        
+    }
+
+    public void BtnCont()
+    {
+        isAllReady = true;
+        if (playerList.Count <= 0)
+        {
+            isAllReady = false;
+            //No player connected
+        } else
+        {
+            foreach (GameObject player in playerList)
+            {
+                if (!player.GetComponent<SetUpCharacter>().isReady)
+                {
+                    //all players are not ready
+                    isAllReady = false;
+                }
+            }
+        }
+         if (isAllReady)
+        {
+            MasterMenu.GetComponent<MainMenuScript>().GetToLevelSelect();
+        }
+
     }
 }
