@@ -15,8 +15,10 @@ public class SetUpCharacter : MonoBehaviour
     private bool isChangeable;
     public GameObject lblReady;
     private Vector2 readyPos;
+    public PlayerConnectScritp connectScript;
 
     public bool isReady;
+    public int occupiedSlot; //Vilken ruta karaktären är i
     private ThingToChange toChange;
 
     private enum ThingToChange
@@ -99,6 +101,11 @@ public class SetUpCharacter : MonoBehaviour
                     changeTimer = resetTime;
                 }
             }
+            if (Input.GetButtonDown(playerNr + "B"))
+            {
+                connectScript.DisconnectPlayer(playerNr, occupiedSlot, gameObject);
+                Destroy(gameObject);
+            }
         }
         
 
@@ -108,6 +115,15 @@ public class SetUpCharacter : MonoBehaviour
             {
                 isReady = false;
                 lblReady.SetActive(false);
+                foreach (PlayerScript playerScript in ScoreScript.scoreScript.playerScripts)
+                {
+                    if (playerScript.playerNr == playerNr)
+                    {
+                        ScoreScript.scoreScript.playerScripts.Remove(playerScript);
+                        break;
+                    }
+                }
+
             } else
             {
                 isReady = true;

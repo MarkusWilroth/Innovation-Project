@@ -20,22 +20,21 @@ public class ScoreScript
         playerScripts[playerNr].gold = gold;
     }
 
-    public void LoadPlayerScript(int playerNr, Material limb, Material skin, Material armor, Material component, string name)
+    public void LoadPlayerScript(PlayerScript playerScript)
     {
-        playerScript = new PlayerScript();
-        playerScript.playerNr = playerNr;
+        //playerScript.playerNr = playerNr;
 
-        playerScript.limb = limb;
-        playerScript.skin = skin;
-        playerScript.armor = armor;
-        playerScript.component = component;
-        playerScript.strName = name;
+        //playerScript.limb = limb;
+        //playerScript.skin = skin;
+        //playerScript.armor = armor;
+        //playerScript.component = component;
+        //playerScript.strName = name;
 
         if (playerScripts != null)
         {
             foreach (PlayerScript player in playerScripts)
             {
-                if (player.playerNr == playerNr)
+                if (player.playerNr == playerScript.playerNr)
                 {
                     playerScripts.Remove(player);
                     break;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerConnectScritp : MonoBehaviour
 {
-    private int[] connectedControllers = new int[] { 0,0,0,0};
+    private int[] connectedControllers = new int[] { 0,0,0,0}; //Håller koll på vilka kontroller som är spawnade
+    private bool[] occupiedSpot = new bool[] { false, false, false, false }; //Håller koll på vilka positioner som är tagna
     public GameObject SetupCharacter;
     public GameObject LblPressToJoin;
     public GameObject LblReady;
@@ -38,7 +39,7 @@ public class PlayerConnectScritp : MonoBehaviour
         for (int i = 1; i <= 4; i++)
         {
 
-            if (Input.GetButtonDown(i + "A"))
+            if (Input.GetButtonDown(i +"A"))
             {
                 if (connectedControllers[i-1] == 0) //Controllern används inte
                 {
@@ -49,16 +50,41 @@ public class PlayerConnectScritp : MonoBehaviour
         }
     }
 
+    private void UpdateToJoin() //Ändrar så att rätt press A to join visas;
+    {
+        for (int i = 0; i < occupiedSpot.Length; i++)
+        {
+            if (occupiedSpot[i])
+            {
+                pressHolder[i].SetActive(false);
+            } else
+            {
+                pressHolder[i].SetActive(true);
+            }
+        }
+    }
+
     private void SpawnCharacter(int player) //Kommer behöva föra om denna ifall vi ska kunna disconnecta kontroller
     {
         holder = Instantiate(SetupCharacter);
-        holder.transform.position = characterSpawnPos[playerList.Count];
+        for (int i = 0; i < occupiedSpot.Length; i++)
+        {
+            if (!occupiedSpot[i]) //Platsen används inte
+            {
+                holder.transform.position = characterSpawnPos[i];
+                holder.GetComponent<SetUpCharacter>().occupiedSlot = i;
+                occupiedSpot[i] = true;
+                break;
+            }
+        }
+        
         holder.transform.SetParent(gameObject.transform, false);
         holder.GetComponent<SetUpCharacter>().playerNr = player;
-
-        pressHolder[playerList.Count].SetActive(false);
-        playerList.Add(holder);
+        holder.GetComponent<SetUpCharacter>().connectScript = this;
         
+        playerList.Add(holder);
+
+        UpdateToJoin();
     }
 
     public void BtnCont()
@@ -83,6 +109,14 @@ public class PlayerConnectScritp : MonoBehaviour
         {
             MasterMenu.GetComponent<MainMenuScript>().GetToLevelSelect();
         }
+    }
 
+    public void DisconnectPlayer(int player, int slot, GameObject playerObj)
+    {
+        connectedControllers[player - 1] = 0;
+        occupiedSpot[slot] = false;
+        playerList.Remove(playerObj);
+
+        UpdateToJoin();
     }
 }
