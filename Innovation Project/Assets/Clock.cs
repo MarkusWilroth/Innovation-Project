@@ -34,7 +34,7 @@ public class Clock : MonoBehaviour
         }
         if (time == 3)
         {
-            clock.PlayOneShot(sounds.countDown, 0.01f);
+            clock.PlayOneShot(sounds.countDown, 0.1f);
         }
     }
 }
