@@ -10,12 +10,17 @@ public class Clock : MonoBehaviour
     Text countDown;
     Sounds sounds;
     AudioSource clock;
+    public ScoreOne[] scores;
+    int higestScore = 0;
+    string player;
+    string winner;
     // Start is called before the first frame update
     void Start()
     {
         countDown = GetComponent<Text>();
         sounds = GetComponent<Sounds>();
         clock = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -25,6 +30,15 @@ public class Clock : MonoBehaviour
         countDown.text = time.ToString();
         if (time <= 0)
         {
+            for (int i = 0; i < scores.Length; i++)
+            {
+                if (i == 0 || scores[i].points > higestScore)
+                {
+                    higestScore = scores[i].points;
+                    player = "player " + (i + 1);
+                }
+            }
+            countDown.text = "winner: " + player;
             Time.timeScale = 0f;
         }
         if (secound <= 0f)
