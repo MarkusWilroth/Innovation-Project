@@ -21,19 +21,19 @@ public class Trash : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.name == "PlayerOne")
+            if (collision.gameObject.name == "Player1")
             {
                 holder = 1;
             }
-            if (collision.gameObject.name == "PlayerTwo")
+            if (collision.gameObject.name == "Player2")
             {
                 holder = 2;
             }
-            if (collision.gameObject.name == "PlayerThree")
+            if (collision.gameObject.name == "Player3")
             {
                 holder = 3;
             }
-            if (collision.gameObject.name == "PlayerFour")
+            if (collision.gameObject.name == "Player4")
             {
                 holder = 4;
             }

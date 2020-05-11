@@ -31,6 +31,7 @@ public class SpawnPlayers : MonoBehaviour
                     
                     holder.transform.SetParent(gameObject.transform, false);
                     holder.GetComponent<GamepadPlayerController>().player = player.playerNr;
+                    holder.name = "Player" + (i + 1);
                 }
             }
         } else
@@ -42,6 +43,7 @@ public class SpawnPlayers : MonoBehaviour
 
                 holder.transform.SetParent(gameObject.transform, false);
                 holder.GetComponent<GamepadPlayerController>().player = i + 1;
+                holder.name = "Player" + (i + 1);
             }
         }
     }
