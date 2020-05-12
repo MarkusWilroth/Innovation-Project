@@ -3,14 +3,16 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AntiTrashMagnet
     - Clock
-    - GamepadPlayer2Controller
-    - GamepadPlayer3Controller
-    - GamepadPlayer4Controller
+    - GamepadPlayerController
+    - KeyboardScript
     - MainMenuScript
+    - PlayerConnectScritp
     - PlayerControllerManager
+    - PlayerScript
     - ScoreOne
     - SetUpCharacter
     - Sounds
+    - SpawnPlayers
     - SpawnTrash
     - Trash
     - Trashcan
@@ -25,10 +27,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -43,8 +43,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/Jack.unity:
     - Class: 1
@@ -88,37 +86,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11384}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11668}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 12302}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12356}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12846}
+      Script: {instanceID: 12298}
+    - Class: 114
+      Script: {instanceID: 12352}
     - Class: 114
       Script: {instanceID: 12986}
     - Class: 114
       Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13332}
     - Class: 114
-      Script: {instanceID: 13442}
-    - Class: 114
-      Script: {instanceID: 15790}
+      Script: {instanceID: 13444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,23 +157,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12416}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12264}
+    - Class: 114
+      Script: {instanceID: 12412}
+    - Class: 114
+      Script: {instanceID: 12648}
+    - Class: 114
+      Script: {instanceID: 12746}
     - Class: 114
       Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13346}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13442}
+      Script: {instanceID: 13444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -223,6 +227,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 0202aabe8a715261c9bcc25010540da6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPlayers
   - hash:
       serializedVersion: 2
       Hash: 5bd9a19c7b5f76c563418e28f48a561b
@@ -369,7 +379,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d2db535b9bc7a9683a15f5ac159c1a79
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Clock
@@ -477,7 +487,13 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 5ba3db58e9bd7b891fbc3d0cda709eb2
+      Hash: ef936f4b97e7b5af7f27b4e1eb43928c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnSteps
+  - hash:
+      serializedVersion: 2
+      Hash: 0b239bc02965ed2f482a17969d585bc4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -517,6 +533,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 29afdcae113113ac894e6df4cec6a488
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerConnectScritp
   - hash:
       serializedVersion: 2
       Hash: 6d9f4d196327825ecb9e48ca6199a3da
@@ -579,7 +601,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 1a8febaeab1bb57b9bd769c863653d8e
+      Hash: 8f79f2e342d02084452cf3cc5270049b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SetUpCharacter
@@ -621,10 +643,22 @@ ScriptsOnlyBuild:
     className: NetworkMigrationManager
   - hash:
       serializedVersion: 2
+      Hash: 08fd93b5253567d239580578b6f91f00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeyboardScript
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 25c6c313120960a6c1a9b9923327f098
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StepScript
   - hash:
       serializedVersion: 2
       Hash: a499e02a7312d972e00709e776ac6f2f
@@ -717,6 +751,12 @@ ScriptsOnlyBuild:
     className: SpawnTrash
   - hash:
       serializedVersion: 2
+      Hash: a919cc31e8704742b240d51d0f90c022
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreOne
+  - hash:
+      serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -765,7 +805,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 0f42cd7267b6719b487ac4ce917847f4
+      Hash: c2f5d8e1dddbb999c58460836868b358
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenuScript
@@ -841,14 +881,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreOne
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Jack.unity
-  playerPath: D:/Unity/Innovation-Project/The Game/Innovation Project.exe
+  playerPath: C:/Users/Flugan/Innovation-Project/The Game/Innovation Project.exe
