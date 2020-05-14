@@ -11,7 +11,7 @@ public class SetUpCharacter : MonoBehaviour
     public int playerNr;
     private int armorCounter, skinCounter, limbCounter, compCounter, changeCounter;
     public int resetTime;
-    private float verticalAxis, axisValue, changeTimer;
+    private float verticalAxis, oldVerticalAxis, axisValue, changeTimer;
     private bool isChangeable;
     public GameObject lblReady;
     private Vector2 readyPos;
@@ -61,6 +61,8 @@ public class SetUpCharacter : MonoBehaviour
         lblReady.transform.SetParent(transform.parent.transform, false);
 
         lblReady.SetActive(false);
+
+        oldVerticalAxis = Input.GetAxisRaw(playerNr + "JoyVertical");
     }
 
     private void Update()
@@ -85,17 +87,18 @@ public class SetUpCharacter : MonoBehaviour
             if (isChangeable)
             {
                 verticalAxis = Input.GetAxisRaw(playerNr + "JoyVertical");
-
-                if (verticalAxis > axisValue)
+                //Debug.Log("VerticalAxis: " + verticalAxis);
+                if (verticalAxis > oldVerticalAxis)
                 {
-                    axisValue = verticalAxis;
+                    oldVerticalAxis = verticalAxis;
+                    Debug.Log("Axis Value: " + oldVerticalAxis);
                     SwitchToChange(1);
                     isChangeable = false;
                     changeTimer = resetTime;
                 }
-                else if (verticalAxis < axisValue)
+                else if (verticalAxis < oldVerticalAxis)
                 {
-                    axisValue = verticalAxis;
+                    oldVerticalAxis = verticalAxis;
                     SwitchToChange(-1);
                     isChangeable = false;
                     changeTimer = resetTime;
