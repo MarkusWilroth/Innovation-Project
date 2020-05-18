@@ -54,7 +54,7 @@ public class SpawnSteps : MonoBehaviour
         }
     }
 
-    private void SpawnStep(GameObject step, Step.StepType stepType)
+    private void SpawnStep(GameObject step, StepType stepType)
     {
         holder = Instantiate(step);
         holder.transform.position = spawnPos;
