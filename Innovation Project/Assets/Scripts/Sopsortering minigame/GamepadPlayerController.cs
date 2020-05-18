@@ -20,7 +20,7 @@ public class GamepadPlayerController : MonoBehaviour
     float xBoundary = 8.5f;
     float zBoundary = 7f;
     float lowZBoundary = -4f;
-    float throwForce = 5f;
+    float throwForce = 2f;
     public int player;
     Vector3 dropDirection;
     public float leftAxis;
@@ -67,7 +67,7 @@ public class GamepadPlayerController : MonoBehaviour
         }
         if (holding)
         {
-            hold.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            hold.transform.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
         }
         if (holding && Input.GetButtonDown(player + "X") && (leftAxis != 0 || forwardAxis != 0))
         {
@@ -87,7 +87,7 @@ public class GamepadPlayerController : MonoBehaviour
         {
             holding = true;
             hold = collision.gameObject;
-            collision.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            collision.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
             collision.transform.parent = transform;
         }
         else if (collision.gameObject.CompareTag("Player") && holding)
@@ -135,7 +135,7 @@ public class GamepadPlayerController : MonoBehaviour
         holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
-        dropDirection.y = 1;
+        trashBody.useGravity = true;
         trashBody.AddForce(dropDirection * throwForce, ForceMode.Impulse);
         hold = null;
         targetPlayer = null;
@@ -146,7 +146,7 @@ public class GamepadPlayerController : MonoBehaviour
         holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
-        direction.y = 1;
+        trashBody.useGravity = true;
         trashBody.AddForce(direction * throwForce, ForceMode.Impulse);
         playerAudio.PlayOneShot(sounds.kasta, 1f);
 
