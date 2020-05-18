@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public int points, gold, playerNr; //PlayerNr är vilken spelare det är
     public Material limb, skin, armor, component;
 
+    public int stepId;
+
     //Något sätt att veta vilken kontroll som styr denna spelare...
 
     //Något sätt att ha items? vilka items ska vi ha???
