@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 27194902}
   m_Layer: 0
   m_Name: 'Step: 40'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27194900}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -170,6 +170,11 @@ MonoBehaviour:
   stepId: 40
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &27194903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -245,7 +250,7 @@ GameObject:
   - component: {fileID: 37909417}
   m_Layer: 0
   m_Name: 'Step: 1'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37909415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -279,6 +284,11 @@ MonoBehaviour:
   stepId: 1
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &37909418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,7 +364,7 @@ GameObject:
   - component: {fileID: 45942129}
   m_Layer: 0
   m_Name: 'Step: 43'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +390,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45942127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -388,6 +398,11 @@ MonoBehaviour:
   stepId: 43
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &45942130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -463,7 +478,7 @@ GameObject:
   - component: {fileID: 46318625}
   m_Layer: 0
   m_Name: 'Step: 41'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46318623}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -497,6 +512,11 @@ MonoBehaviour:
   stepId: 41
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &46318626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -572,7 +592,7 @@ GameObject:
   - component: {fileID: 46343363}
   m_Layer: 0
   m_Name: 'Step: 67'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,7 +618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46343361}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -606,6 +626,11 @@ MonoBehaviour:
   stepId: 67
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &46343364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -681,7 +706,7 @@ GameObject:
   - component: {fileID: 56683006}
   m_Layer: 0
   m_Name: 'Step: 20'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,7 +732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56683004}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -715,6 +740,11 @@ MonoBehaviour:
   stepId: 20
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &56683007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -790,7 +820,7 @@ GameObject:
   - component: {fileID: 89684430}
   m_Layer: 0
   m_Name: 'Step: 16'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -816,7 +846,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89684428}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -824,6 +854,11 @@ MonoBehaviour:
   stepId: 16
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &89684431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -899,7 +934,7 @@ GameObject:
   - component: {fileID: 150921641}
   m_Layer: 0
   m_Name: 'Step: 9'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +960,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150921639}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -933,6 +968,11 @@ MonoBehaviour:
   stepId: 9
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &150921642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -993,6 +1033,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150921639}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &197328142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197328144}
+  - component: {fileID: 197328143}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &197328143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197328142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a25c72d4a807946b773535916564e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefab: {fileID: 332890818948089573, guid: b4ff5016874868548b6144ce56caaac6,
+    type: 3}
+  testCharacters: 3
+--- !u!4 &197328144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197328142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17951322, y: 1.6250226, z: 10.608247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207611881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1094,7 @@ GameObject:
   - component: {fileID: 207611883}
   m_Layer: 0
   m_Name: 'Step: 39'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,7 +1120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207611881}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1042,6 +1128,11 @@ MonoBehaviour:
   stepId: 39
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &207611884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1117,7 +1208,7 @@ GameObject:
   - component: {fileID: 214190160}
   m_Layer: 0
   m_Name: 'Step: 11'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1143,7 +1234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214190158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1151,6 +1242,11 @@ MonoBehaviour:
   stepId: 11
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &214190161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1226,7 +1322,7 @@ GameObject:
   - component: {fileID: 261459271}
   m_Layer: 0
   m_Name: 'Step: 31'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1252,7 +1348,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261459269}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1260,6 +1356,11 @@ MonoBehaviour:
   stepId: 31
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &261459272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1335,7 +1436,7 @@ GameObject:
   - component: {fileID: 267117470}
   m_Layer: 0
   m_Name: 'Step: 55'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1361,7 +1462,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267117468}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1369,6 +1470,11 @@ MonoBehaviour:
   stepId: 55
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &267117471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,7 +1550,7 @@ GameObject:
   - component: {fileID: 276561377}
   m_Layer: 0
   m_Name: 'Step: 34'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,7 +1576,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276561375}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1478,6 +1584,11 @@ MonoBehaviour:
   stepId: 34
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &276561378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1553,7 +1664,7 @@ GameObject:
   - component: {fileID: 276706526}
   m_Layer: 0
   m_Name: 'Step: 14'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1579,7 +1690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276706524}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1587,6 +1698,11 @@ MonoBehaviour:
   stepId: 14
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &276706527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1662,7 +1778,7 @@ GameObject:
   - component: {fileID: 292140377}
   m_Layer: 0
   m_Name: 'Step: 8'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1688,7 +1804,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292140375}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1696,6 +1812,11 @@ MonoBehaviour:
   stepId: 8
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &292140378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1771,7 +1892,7 @@ GameObject:
   - component: {fileID: 341898842}
   m_Layer: 0
   m_Name: 'Step: 87'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,7 +1918,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341898840}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1805,6 +1926,11 @@ MonoBehaviour:
   stepId: 87
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &341898843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1880,7 +2006,7 @@ GameObject:
   - component: {fileID: 347346370}
   m_Layer: 0
   m_Name: 'Step: 30'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1906,7 +2032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347346368}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -1914,6 +2040,11 @@ MonoBehaviour:
   stepId: 30
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &347346371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1989,7 +2120,7 @@ GameObject:
   - component: {fileID: 362717711}
   m_Layer: 0
   m_Name: 'Step: 58'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2015,7 +2146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362717709}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2023,6 +2154,11 @@ MonoBehaviour:
   stepId: 58
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &362717712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2098,7 +2234,7 @@ GameObject:
   - component: {fileID: 375275555}
   m_Layer: 0
   m_Name: 'Step: 82'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2124,7 +2260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375275553}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2132,6 +2268,11 @@ MonoBehaviour:
   stepId: 82
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &375275556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2207,7 +2348,7 @@ GameObject:
   - component: {fileID: 384035283}
   m_Layer: 0
   m_Name: 'Step: 79'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2233,7 +2374,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384035281}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2241,6 +2382,11 @@ MonoBehaviour:
   stepId: 79
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &384035284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2316,7 +2462,7 @@ GameObject:
   - component: {fileID: 437806289}
   m_Layer: 0
   m_Name: 'Step: 70'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2342,7 +2488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437806287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2350,6 +2496,11 @@ MonoBehaviour:
   stepId: 70
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &437806290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2425,7 +2576,7 @@ GameObject:
   - component: {fileID: 448884711}
   m_Layer: 0
   m_Name: 'Step: 72'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2451,7 +2602,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448884709}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2459,6 +2610,11 @@ MonoBehaviour:
   stepId: 72
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &448884712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2534,7 +2690,7 @@ GameObject:
   - component: {fileID: 463455197}
   m_Layer: 0
   m_Name: 'Step: 71'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2560,7 +2716,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463455195}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2568,6 +2724,11 @@ MonoBehaviour:
   stepId: 71
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &463455198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2643,7 +2804,7 @@ GameObject:
   - component: {fileID: 467973031}
   m_Layer: 0
   m_Name: 'Step: 75'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467973029}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2677,6 +2838,11 @@ MonoBehaviour:
   stepId: 75
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &467973032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2752,7 +2918,7 @@ GameObject:
   - component: {fileID: 486852102}
   m_Layer: 0
   m_Name: 'Step: 54'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2778,7 +2944,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486852100}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2786,6 +2952,11 @@ MonoBehaviour:
   stepId: 54
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &486852103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2861,7 +3032,7 @@ GameObject:
   - component: {fileID: 551711164}
   m_Layer: 0
   m_Name: 'Step: 0'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2887,7 +3058,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551711162}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -2895,6 +3066,11 @@ MonoBehaviour:
   stepId: 0
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &551711165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2970,7 +3146,7 @@ GameObject:
   - component: {fileID: 551905075}
   m_Layer: 0
   m_Name: 'Step: 47'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2996,7 +3172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551905073}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3004,6 +3180,11 @@ MonoBehaviour:
   stepId: 47
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &551905076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3079,7 +3260,7 @@ GameObject:
   - component: {fileID: 618136648}
   m_Layer: 0
   m_Name: 'Step: 63'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3105,7 +3286,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618136646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3113,6 +3294,11 @@ MonoBehaviour:
   stepId: 63
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &618136649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3188,7 +3374,7 @@ GameObject:
   - component: {fileID: 619407446}
   m_Layer: 0
   m_Name: 'Step: 42'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3214,7 +3400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619407444}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3222,6 +3408,11 @@ MonoBehaviour:
   stepId: 42
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &619407447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3297,7 +3488,7 @@ GameObject:
   - component: {fileID: 631557190}
   m_Layer: 0
   m_Name: 'Step: 10'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3323,7 +3514,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631557188}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3331,6 +3522,11 @@ MonoBehaviour:
   stepId: 10
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &631557191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3406,7 +3602,7 @@ GameObject:
   - component: {fileID: 672105460}
   m_Layer: 0
   m_Name: 'Step: 27'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3432,7 +3628,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672105458}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3440,6 +3636,11 @@ MonoBehaviour:
   stepId: 27
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &672105461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3515,7 +3716,7 @@ GameObject:
   - component: {fileID: 693423174}
   m_Layer: 0
   m_Name: 'Step: 3'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3541,7 +3742,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693423172}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3549,6 +3750,11 @@ MonoBehaviour:
   stepId: 3
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &693423175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3624,7 +3830,7 @@ GameObject:
   - component: {fileID: 699461946}
   m_Layer: 0
   m_Name: 'Step: 32'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3650,7 +3856,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699461944}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3658,6 +3864,11 @@ MonoBehaviour:
   stepId: 32
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &699461947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3733,7 +3944,7 @@ GameObject:
   - component: {fileID: 721252724}
   m_Layer: 0
   m_Name: 'Step: 78'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3759,7 +3970,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721252722}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3767,6 +3978,11 @@ MonoBehaviour:
   stepId: 78
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &721252725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3842,7 +4058,7 @@ GameObject:
   - component: {fileID: 754778441}
   m_Layer: 0
   m_Name: 'Step: 59'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3868,7 +4084,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754778439}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3876,6 +4092,11 @@ MonoBehaviour:
   stepId: 59
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &754778442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3951,7 +4172,7 @@ GameObject:
   - component: {fileID: 763355149}
   m_Layer: 0
   m_Name: 'Step: 69'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3977,7 +4198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763355147}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -3985,6 +4206,11 @@ MonoBehaviour:
   stepId: 69
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &763355150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4060,7 +4286,7 @@ GameObject:
   - component: {fileID: 786978730}
   m_Layer: 0
   m_Name: 'Step: 46'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4086,7 +4312,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786978728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4094,6 +4320,11 @@ MonoBehaviour:
   stepId: 46
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &786978731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4169,7 +4400,7 @@ GameObject:
   - component: {fileID: 806273038}
   m_Layer: 0
   m_Name: 'Step: 44'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4195,7 +4426,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806273036}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4203,6 +4434,11 @@ MonoBehaviour:
   stepId: 44
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &806273039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4278,7 +4514,7 @@ GameObject:
   - component: {fileID: 840103229}
   m_Layer: 0
   m_Name: 'Step: 77'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4304,7 +4540,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840103227}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4312,6 +4548,11 @@ MonoBehaviour:
   stepId: 77
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &840103230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4387,7 +4628,7 @@ GameObject:
   - component: {fileID: 843554844}
   m_Layer: 0
   m_Name: 'Step: 24'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4413,7 +4654,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843554842}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4421,6 +4662,11 @@ MonoBehaviour:
   stepId: 24
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &843554845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4496,7 +4742,7 @@ GameObject:
   - component: {fileID: 864204981}
   m_Layer: 0
   m_Name: 'Step: 13'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4522,7 +4768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864204979}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4530,6 +4776,11 @@ MonoBehaviour:
   stepId: 13
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &864204982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4605,7 +4856,7 @@ GameObject:
   - component: {fileID: 875668291}
   m_Layer: 0
   m_Name: 'Step: 76'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4631,7 +4882,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875668289}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4639,6 +4890,11 @@ MonoBehaviour:
   stepId: 76
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &875668292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4711,7 +4967,6 @@ GameObject:
   - component: {fileID: 909610839}
   - component: {fileID: 909610838}
   - component: {fileID: 909610837}
-  - component: {fileID: 909610836}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -4719,28 +4974,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &909610836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909610835}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728a70e5958fa8743ae31f4dcf645de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: Gamemap
-  GroundStep: {fileID: 8942793330972515155, guid: c62e26ee6c7fc804984a238305abe616,
-    type: 3}
-  ShopStep: {fileID: 2742931412461162138, guid: 6365e82d5b4496642a2dda6441283e62,
-    type: 3}
-  StartStep: {fileID: 927702237461521924, guid: 2fca0c8fb8e46bf49bdd8985ca9163f6,
-    type: 3}
-  startX: -15
-  startZ: -10
-  stepSpace: 1.5
 --- !u!65 &909610837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4809,8 +5042,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909610835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 1}
-  m_LocalScale: {x: 25, y: 0.2, z: 25}
+  m_LocalPosition: {x: -0.5, y: -0.1, z: 1}
+  m_LocalScale: {x: 25, y: 0.1, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4830,7 +5063,7 @@ GameObject:
   - component: {fileID: 933662823}
   m_Layer: 0
   m_Name: 'Step: 73'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4856,7 +5089,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933662821}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4864,6 +5097,11 @@ MonoBehaviour:
   stepId: 73
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &933662824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4939,7 +5177,7 @@ GameObject:
   - component: {fileID: 943270253}
   m_Layer: 0
   m_Name: 'Step: 51'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4965,7 +5203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943270251}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -4973,6 +5211,11 @@ MonoBehaviour:
   stepId: 51
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &943270254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5048,7 +5291,7 @@ GameObject:
   - component: {fileID: 981917694}
   m_Layer: 0
   m_Name: 'Step: 35'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5074,7 +5317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981917692}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5082,6 +5325,11 @@ MonoBehaviour:
   stepId: 35
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &981917695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5157,7 +5405,7 @@ GameObject:
   - component: {fileID: 1034931494}
   m_Layer: 0
   m_Name: 'Step: 61'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5183,7 +5431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034931492}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5191,6 +5439,11 @@ MonoBehaviour:
   stepId: 61
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1034931495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5266,7 +5519,7 @@ GameObject:
   - component: {fileID: 1043620328}
   m_Layer: 0
   m_Name: 'Step: 2'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5292,7 +5545,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043620326}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5300,6 +5553,11 @@ MonoBehaviour:
   stepId: 2
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1043620329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5375,7 +5633,7 @@ GameObject:
   - component: {fileID: 1046170324}
   m_Layer: 0
   m_Name: 'Step: 60'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5401,7 +5659,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046170322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5409,6 +5667,11 @@ MonoBehaviour:
   stepId: 60
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1046170325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5484,7 +5747,7 @@ GameObject:
   - component: {fileID: 1077379630}
   m_Layer: 0
   m_Name: 'Step: 38'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5510,7 +5773,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077379628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5518,6 +5781,11 @@ MonoBehaviour:
   stepId: 38
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1077379631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5593,7 +5861,7 @@ GameObject:
   - component: {fileID: 1131988989}
   m_Layer: 0
   m_Name: 'Step: 68'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5619,7 +5887,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131988987}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5627,6 +5895,11 @@ MonoBehaviour:
   stepId: 68
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1131988990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5702,7 +5975,7 @@ GameObject:
   - component: {fileID: 1136706350}
   m_Layer: 0
   m_Name: 'Step: 45'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5728,7 +6001,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136706348}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5736,6 +6009,11 @@ MonoBehaviour:
   stepId: 45
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1136706351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5811,7 +6089,7 @@ GameObject:
   - component: {fileID: 1139054471}
   m_Layer: 0
   m_Name: 'Step: 81'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5837,7 +6115,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139054469}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5845,6 +6123,11 @@ MonoBehaviour:
   stepId: 81
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1139054472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5920,7 +6203,7 @@ GameObject:
   - component: {fileID: 1179122528}
   m_Layer: 0
   m_Name: 'Step: 23'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5946,7 +6229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179122526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -5954,6 +6237,11 @@ MonoBehaviour:
   stepId: 23
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1179122529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6029,7 +6317,7 @@ GameObject:
   - component: {fileID: 1180066730}
   m_Layer: 0
   m_Name: 'Step: 80'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6055,7 +6343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180066728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6063,6 +6351,11 @@ MonoBehaviour:
   stepId: 80
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1180066731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6221,7 +6514,7 @@ GameObject:
   - component: {fileID: 1228269606}
   m_Layer: 0
   m_Name: 'Step: 48'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6247,7 +6540,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228269604}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6255,6 +6548,11 @@ MonoBehaviour:
   stepId: 48
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1228269607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6330,7 +6628,7 @@ GameObject:
   - component: {fileID: 1229034388}
   m_Layer: 0
   m_Name: 'Step: 64'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6356,7 +6654,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229034386}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6364,6 +6662,11 @@ MonoBehaviour:
   stepId: 64
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1229034389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6439,7 +6742,7 @@ GameObject:
   - component: {fileID: 1231745125}
   m_Layer: 0
   m_Name: 'Step: 22'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6465,7 +6768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231745123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6473,6 +6776,11 @@ MonoBehaviour:
   stepId: 22
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1231745126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6640,7 +6948,7 @@ GameObject:
   - component: {fileID: 1288970012}
   m_Layer: 0
   m_Name: 'Step: 33'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6666,7 +6974,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288970010}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6674,6 +6982,11 @@ MonoBehaviour:
   stepId: 33
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1288970013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6749,7 +7062,7 @@ GameObject:
   - component: {fileID: 1302010142}
   m_Layer: 0
   m_Name: 'Step: 21'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6775,7 +7088,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302010140}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6783,6 +7096,11 @@ MonoBehaviour:
   stepId: 21
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1302010143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6858,7 +7176,7 @@ GameObject:
   - component: {fileID: 1318301622}
   m_Layer: 0
   m_Name: 'Step: 5'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6884,7 +7202,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318301620}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -6892,6 +7210,11 @@ MonoBehaviour:
   stepId: 5
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1318301623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6967,7 +7290,7 @@ GameObject:
   - component: {fileID: 1356319947}
   m_Layer: 0
   m_Name: 'Step: 6'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6993,7 +7316,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356319945}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7001,6 +7324,11 @@ MonoBehaviour:
   stepId: 6
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1356319948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7076,7 +7404,7 @@ GameObject:
   - component: {fileID: 1407816185}
   m_Layer: 0
   m_Name: 'Step: 85'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7102,7 +7430,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407816183}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7110,6 +7438,11 @@ MonoBehaviour:
   stepId: 85
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1407816186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7185,7 +7518,7 @@ GameObject:
   - component: {fileID: 1409167019}
   m_Layer: 0
   m_Name: 'Step: 49'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7211,7 +7544,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409167017}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7219,6 +7552,11 @@ MonoBehaviour:
   stepId: 49
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1409167020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7294,7 +7632,7 @@ GameObject:
   - component: {fileID: 1430930805}
   m_Layer: 0
   m_Name: 'Step: 56'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7320,7 +7658,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430930803}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7328,6 +7666,11 @@ MonoBehaviour:
   stepId: 56
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1430930806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7403,7 +7746,7 @@ GameObject:
   - component: {fileID: 1465972528}
   m_Layer: 0
   m_Name: 'Step: 52'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7429,7 +7772,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465972526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7437,6 +7780,11 @@ MonoBehaviour:
   stepId: 52
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1465972529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7512,7 +7860,7 @@ GameObject:
   - component: {fileID: 1469274469}
   m_Layer: 0
   m_Name: 'Step: 36'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7538,7 +7886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469274467}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7546,6 +7894,11 @@ MonoBehaviour:
   stepId: 36
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1469274470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7621,7 +7974,7 @@ GameObject:
   - component: {fileID: 1491416002}
   m_Layer: 0
   m_Name: 'Step: 17'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7647,7 +8000,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491416000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7655,6 +8008,11 @@ MonoBehaviour:
   stepId: 17
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1491416003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7730,7 +8088,7 @@ GameObject:
   - component: {fileID: 1580649107}
   m_Layer: 0
   m_Name: 'Step: 62'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7756,7 +8114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580649105}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7764,6 +8122,11 @@ MonoBehaviour:
   stepId: 62
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1580649108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7839,7 +8202,7 @@ GameObject:
   - component: {fileID: 1588857644}
   m_Layer: 0
   m_Name: 'Step: 65'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7865,7 +8228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588857642}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7873,6 +8236,11 @@ MonoBehaviour:
   stepId: 65
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1588857645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7948,7 +8316,7 @@ GameObject:
   - component: {fileID: 1591693931}
   m_Layer: 0
   m_Name: 'Step: 19'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7974,7 +8342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591693929}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -7982,6 +8350,11 @@ MonoBehaviour:
   stepId: 19
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1591693932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8057,7 +8430,7 @@ GameObject:
   - component: {fileID: 1605820913}
   m_Layer: 0
   m_Name: 'Step: 86'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8083,7 +8456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605820911}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8091,6 +8464,11 @@ MonoBehaviour:
   stepId: 86
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1605820914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8166,7 +8544,7 @@ GameObject:
   - component: {fileID: 1648915035}
   m_Layer: 0
   m_Name: 'Step: 66'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8192,7 +8570,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648915033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8200,6 +8578,11 @@ MonoBehaviour:
   stepId: 66
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1648915036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8532,7 +8915,7 @@ GameObject:
   - component: {fileID: 1653275220}
   m_Layer: 0
   m_Name: 'Step: 37'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8558,7 +8941,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653275218}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8566,6 +8949,11 @@ MonoBehaviour:
   stepId: 37
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1653275221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8641,7 +9029,7 @@ GameObject:
   - component: {fileID: 1671009696}
   m_Layer: 0
   m_Name: 'Step: 15'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8667,7 +9055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671009694}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8675,6 +9063,11 @@ MonoBehaviour:
   stepId: 15
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1671009697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8750,7 +9143,7 @@ GameObject:
   - component: {fileID: 1699430601}
   m_Layer: 0
   m_Name: 'Step: 53'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8776,7 +9169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699430599}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8784,6 +9177,11 @@ MonoBehaviour:
   stepId: 53
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1699430602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8859,7 +9257,7 @@ GameObject:
   - component: {fileID: 1726432263}
   m_Layer: 0
   m_Name: 'Step: 74'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8885,7 +9283,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726432261}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -8893,6 +9291,11 @@ MonoBehaviour:
   stepId: 74
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1726432264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8968,7 +9371,7 @@ GameObject:
   - component: {fileID: 1771677723}
   m_Layer: 0
   m_Name: 'Step: 28'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8994,7 +9397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771677721}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9002,6 +9405,11 @@ MonoBehaviour:
   stepId: 28
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1771677724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9077,7 +9485,7 @@ GameObject:
   - component: {fileID: 1800410825}
   m_Layer: 0
   m_Name: 'Step: 84'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9103,7 +9511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800410823}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9111,6 +9519,11 @@ MonoBehaviour:
   stepId: 84
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1800410826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9186,7 +9599,7 @@ GameObject:
   - component: {fileID: 1816563341}
   m_Layer: 0
   m_Name: 'Step: 26'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9212,7 +9625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816563339}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9220,6 +9633,11 @@ MonoBehaviour:
   stepId: 26
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1816563342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9295,7 +9713,7 @@ GameObject:
   - component: {fileID: 1825575093}
   m_Layer: 0
   m_Name: 'Step: 4'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9321,7 +9739,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825575091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9329,6 +9747,11 @@ MonoBehaviour:
   stepId: 4
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1825575094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9404,7 +9827,7 @@ GameObject:
   - component: {fileID: 1907933528}
   m_Layer: 0
   m_Name: 'Step: 12'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9430,7 +9853,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907933526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9438,6 +9861,11 @@ MonoBehaviour:
   stepId: 12
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &1907933529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9513,7 +9941,7 @@ GameObject:
   - component: {fileID: 2003730674}
   m_Layer: 0
   m_Name: 'Step: 83'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9539,7 +9967,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003730672}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9547,6 +9975,11 @@ MonoBehaviour:
   stepId: 83
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2003730675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9622,7 +10055,7 @@ GameObject:
   - component: {fileID: 2015357641}
   m_Layer: 0
   m_Name: 'Step: 18'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9648,7 +10081,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015357639}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9656,6 +10089,11 @@ MonoBehaviour:
   stepId: 18
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2015357642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9731,7 +10169,7 @@ GameObject:
   - component: {fileID: 2055176244}
   m_Layer: 0
   m_Name: 'Step: 7'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9757,7 +10195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055176242}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9765,6 +10203,11 @@ MonoBehaviour:
   stepId: 7
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2055176245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9840,7 +10283,7 @@ GameObject:
   - component: {fileID: 2070973473}
   m_Layer: 0
   m_Name: 'Step: 25'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9866,7 +10309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070973471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9874,6 +10317,11 @@ MonoBehaviour:
   stepId: 25
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2070973474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9949,7 +10397,7 @@ GameObject:
   - component: {fileID: 2106095622}
   m_Layer: 0
   m_Name: 'Step: 50'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9975,7 +10423,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106095620}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -9983,6 +10431,11 @@ MonoBehaviour:
   stepId: 50
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2106095623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10058,7 +10511,7 @@ GameObject:
   - component: {fileID: 2134906338}
   m_Layer: 0
   m_Name: 'Step: 57'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10084,7 +10537,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134906336}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -10092,6 +10545,11 @@ MonoBehaviour:
   stepId: 57
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2134906339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10167,7 +10625,7 @@ GameObject:
   - component: {fileID: 2145560315}
   m_Layer: 0
   m_Name: 'Step: 29'
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10193,7 +10651,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145560313}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c97132b8b2ce8e438090178ffc9be2b, type: 3}
   m_Name: 
@@ -10201,6 +10659,11 @@ MonoBehaviour:
   stepId: 29
   CharacterOnStepList: []
   stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!65 &2145560316
 BoxCollider:
   m_ObjectHideFlags: 0
