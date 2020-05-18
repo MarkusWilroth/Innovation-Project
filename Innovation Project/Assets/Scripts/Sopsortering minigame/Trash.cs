@@ -5,10 +5,11 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     public int holder;
+    Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -19,8 +20,10 @@ public class Trash : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+       
         if (collision.gameObject.CompareTag("Player"))
         {
+            rb.useGravity = false;
             if (collision.gameObject.name == "Player1")
             {
                 holder = 1;
