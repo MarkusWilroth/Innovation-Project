@@ -49,28 +49,31 @@ public class BoardPlayerScript : MonoBehaviour
                     if (!hasTarget)
                     {
                         moveLength = RollDie();
-                        if (moveLength <= 0 || moveLength >= 6)
-                        {
-                            Debug.Log("MoveLength: " + moveLength);
-                        }
                         
-                        for (int i = 1; i < moveLength; i++) //Tar fram alla steg karaktären kommer gå till för att nå målet
+                        for (int i = 1; i <= moveLength; i++) //Tar fram alla steg karaktären kommer gå till för att nå målet
                         {
+                            bool isRemoved = false;
                             foreach (GameObject step in allSteps)
                             {
+                                if (!isRemoved && step.GetComponent<StepScript>().stepId == GetComponent<PlayerScript>().stepId)
+                                {
+                                    step.GetComponent<StepScript>().RemoveCharacter(gameObject);
+                                }
                                 if (step.GetComponent<StepScript>().stepId == GetComponent<PlayerScript>().stepId + i)
                                 {
                                     stepList.Add(step);
                                     targetStep = step;
-                                    //Debug.Log("Added a step!");
+                                    //Flytta de som står på rutan
+
                                     break;
                                 }
                             }
                         }
-
                         hasTarget = true;
+
                     } else
                     {
+                        //Debug.Log("Stepcount: " + stepList.Count);
                         if (stepList.Count != 0)
                         {
                             
@@ -84,6 +87,8 @@ public class BoardPlayerScript : MonoBehaviour
                             }
                         } else //Den har gått till alla sina target (Den är färdig
                         {
+                            targetStep.GetComponent<StepScript>().AddCharacter(gameObject);
+                            stepList.Clear();
                             playerPhase = PlayerPhase.eventPhase;
                         }
 
@@ -106,6 +111,7 @@ public class BoardPlayerScript : MonoBehaviour
     private void EndTurn()
     {
         isPlayerTurn = false;
+        hasTarget = false;
         gameboard.NextTurn();
     }
     public void SpawnCharacter(Gameboard gameboard, GameObject[] allSteps)
@@ -124,7 +130,7 @@ public class BoardPlayerScript : MonoBehaviour
 
     public int RollDie()
     {
-        int dieRoll = Random.Range(1, 6); //Tar positionen den står på och lägger till tärningsslaget för att få fram nästa steg
+        int dieRoll = Random.Range(1, 7); //Tar positionen den står på och lägger till tärningsslaget för att få fram nästa steg
         return (dieRoll);
     }
 }

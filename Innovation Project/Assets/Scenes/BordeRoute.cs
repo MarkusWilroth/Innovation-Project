@@ -27,6 +27,7 @@ public class BordeRoute : MonoBehaviour
                 Gizmos.DrawLine(prevPos, currentPos);
             }
         }
+        Gizmos.DrawLine(childNodeList[childNodeList.Count - 1].position, childNodeList[0].position);
     }
 
     private void FillNodes()

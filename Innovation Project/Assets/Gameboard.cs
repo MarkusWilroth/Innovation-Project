@@ -19,6 +19,8 @@ public class Gameboard : MonoBehaviour
     /*ToDo:
      * Fixa turns
      * Fixa movement
+     * Fixa rätt animationer
+     * Fixa roation
      */
 
     void Start()
@@ -74,7 +76,7 @@ public class Gameboard : MonoBehaviour
             playerTurn = 0;
         }
         //Debug.Log(" - CharacterOrder: " + characterOrder.ToString());
-        Debug.Log("PlayerTurn["+playerTurn+"]: " + characterOrder[playerTurn].GetComponent<PlayerScript>().playerNr);
+        //Debug.Log("PlayerTurn["+playerTurn+"]: " + characterOrder[playerTurn].GetComponent<PlayerScript>().playerNr);
         characterOrder[playerTurn].GetComponent<BoardPlayerScript>().GetTurn();
     }
 

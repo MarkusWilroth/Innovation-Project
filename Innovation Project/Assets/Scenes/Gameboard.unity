@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 40
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 1
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 43
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 41
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 67
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 20
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 16
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 9
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 39
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 11
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 31
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 55
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 34
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 14
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 8
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1925,7 +1925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 87
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 30
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 58
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 82
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2381,7 +2381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 79
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2483,7 +2483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: -207}
+  m_AnchoredPosition: {x: 734, y: -409}
   m_SizeDelta: {x: 66.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401558441
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 70
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 72
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -2920,7 +2920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 71
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3034,7 +3034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 75
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3148,7 +3148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 54
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3376,7 +3376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 47
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3490,7 +3490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 63
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3604,7 +3604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 42
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3718,7 +3718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 10
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3832,7 +3832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 27
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -3946,7 +3946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 3
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4060,7 +4060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 32
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4174,7 +4174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 78
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4288,7 +4288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 59
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4402,7 +4402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 69
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4516,7 +4516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 46
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4630,7 +4630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 44
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4744,7 +4744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 77
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4858,7 +4858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 24
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -4972,7 +4972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 13
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5086,7 +5086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 76
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5293,7 +5293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 73
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5407,7 +5407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 51
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 35
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5635,7 +5635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 61
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5749,7 +5749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 2
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5863,7 +5863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 60
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -5977,7 +5977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 38
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6091,7 +6091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 68
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6205,7 +6205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 45
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 81
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 23
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6547,7 +6547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 80
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6744,7 +6744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 48
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 1
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6858,7 +6858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 64
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -6972,7 +6972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 22
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7178,7 +7178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 33
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7292,7 +7292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 21
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7406,7 +7406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 5
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7520,7 +7520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 6
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7634,7 +7634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 85
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7748,7 +7748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 49
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7862,7 +7862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 56
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -7976,7 +7976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 52
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8090,7 +8090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 36
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8204,7 +8204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 17
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8318,7 +8318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 62
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8432,7 +8432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 65
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8546,7 +8546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 19
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 1
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8660,7 +8660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 86
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -8774,7 +8774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 66
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9145,7 +9145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 37
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9259,7 +9259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 15
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9373,7 +9373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 53
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9487,7 +9487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 74
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 28
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9715,7 +9715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 84
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9829,7 +9829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 26
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -9943,7 +9943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 4
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10057,7 +10057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 12
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10171,7 +10171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 83
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10285,7 +10285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 18
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10385,7 +10385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 196}
+  m_AnchoredPosition: {x: 0, y: 405}
   m_SizeDelta: {x: 2000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044531978
@@ -10476,7 +10476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 7
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10590,10 +10590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10756,7 +10756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 25
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10870,7 +10870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 50
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -10984,7 +10984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 57
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -11098,7 +11098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 29
   CharacterOnStepList: []
-  stepType: 0
+  stepType: 2
   characterPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
