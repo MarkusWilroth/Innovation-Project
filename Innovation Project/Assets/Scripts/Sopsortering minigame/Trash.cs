@@ -5,8 +5,17 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     public int holder;
+    public TrashType trashType;
+    
     Rigidbody rb;
     // Start is called before the first frame update
+
+    public enum TrashType
+    {
+        glass,
+        plastic,
+        paper
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();

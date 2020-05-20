@@ -6,6 +6,7 @@ public class SpawnTrash : MonoBehaviour
 {
 
     public GameObject[] trash;
+    public GameObject holder;
     AudioSource aS;
     Sounds sound;
     int x;
@@ -36,6 +37,21 @@ public class SpawnTrash : MonoBehaviour
 
         x = Random.Range(0, trash.Length);
 
-        Instantiate(trash[x], spawnPos, trash[x].transform.rotation);
+        holder = Instantiate(trash[x], spawnPos, trash[x].transform.rotation);
+        switch (x)
+        {
+            case 0:
+                holder.GetComponent<Trash>().trashType = Trash.TrashType.plastic;
+                break;
+            case 1:
+                holder.GetComponent<Trash>().trashType = Trash.TrashType.paper;
+                break;
+            case 2:
+                holder.GetComponent<Trash>().trashType = Trash.TrashType.glass;
+                break;
+            default:
+                Debug.Log("Can't find object for X: " + x);
+                break;
+        }
     }
 }

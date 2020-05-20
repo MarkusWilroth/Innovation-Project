@@ -7,10 +7,11 @@ public class Trashcan : MonoBehaviour
     // Start is called before the first frame update
     MeshRenderer test;
     MeshRenderer testTwo;
-    Trash trash;
+    Trash trashScript;
     Sounds sound;
     AudioSource aS;
     public ScoreOne scoreOne, scoreTwo, scoreThree, scoreFour;
+    public Trash.TrashType dumpsterHolder;
 
     void Start()
     {
@@ -31,23 +32,23 @@ public class Trashcan : MonoBehaviour
         if (collision.gameObject.CompareTag("Trash"))
         {
             testTwo = collision.gameObject.GetComponent<MeshRenderer>();
-            trash = collision.gameObject.GetComponent<Trash>();
-            if (test.material.color == testTwo.material.color)
+            trashScript = collision.gameObject.GetComponent<Trash>();
+            if (trashScript.trashType == dumpsterHolder)
             {
                 aS.PlayOneShot(sound.Traffa, 0.5f);
-                if (trash.holder == 1)
+                if (trashScript.holder == 1)
                 {
                     scoreOne.ChangePoints(10);
                 }
-                else if (trash.holder == 2)
+                else if (trashScript.holder == 2)
                 {
                     scoreTwo.ChangePoints(10);
                 }
-                else if (trash.holder == 3)
+                else if (trashScript.holder == 3)
                 {
                     scoreThree.ChangePoints(10);
                 }
-                else if (trash.holder == 4)
+                else if (trashScript.holder == 4)
                 {
                     scoreFour.ChangePoints(10);
                 }
@@ -56,19 +57,19 @@ public class Trashcan : MonoBehaviour
             else
             {
                 aS.PlayOneShot(sound.fel, 0.5f);
-                if (trash.holder == 1)
+                if (trashScript.holder == 1)
                 {
                     scoreOne.ChangePoints(-10);
                 }
-                else if (trash.holder == 2)
+                else if (trashScript.holder == 2)
                 {
                     scoreTwo.ChangePoints(-10);
                 }
-                else if (trash.holder == 3)
+                else if (trashScript.holder == 3)
                 {
                     scoreThree.ChangePoints(-10);
                 }
-                else if (trash.holder == 4)
+                else if (trashScript.holder == 4)
                 {
                     scoreFour.ChangePoints(-10);
                 }
