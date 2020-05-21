@@ -17,13 +17,14 @@ namespace Step
         public int stepId; //Används för att se till att spelaren går frammåt
         public List<GameObject> CharacterOnStepList;
         public StepType stepType;
-        private float spaceOffsetH = 0.3f, spaceOffsetV = 0.25f;
+        private float spaceOffsetH = 2f, spaceOffsetV = 1.7f;
 
         //public Vector3 oneCharacterPos;
         //public Vector3[] twoCharacterPos;
         //public Vector3[] threeCharacterPos;
         public Vector3[] characterPos = new Vector3[4];
 
+        public Vector3 entryPointPos;
         private Vector3 MittTopPos, VänsterTopPos, HögerTopPos;
         private Vector3 MittMittPos, VänsterMittPos, HögerMittPos;
         private Vector3 MittBotPos, VänsterBotPos, HögerBotPos;
@@ -111,6 +112,8 @@ namespace Step
             MittBotPos = new Vector3(transform.position.x, transform.position.y + spaceOffsetV, transform.position.z - spaceOffsetH);
             VänsterBotPos = new Vector3(transform.position.x + spaceOffsetH, transform.position.y + spaceOffsetV, transform.position.z - spaceOffsetH);
             HögerBotPos = new Vector3(transform.position.x - spaceOffsetH, transform.position.y + spaceOffsetV, transform.position.z - spaceOffsetH);
+
+            entryPointPos = MittMittPos;
         }
     }
     

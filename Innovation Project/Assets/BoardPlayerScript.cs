@@ -77,7 +77,7 @@ public class BoardPlayerScript : MonoBehaviour
                         if (stepList.Count != 0)
                         {
                             
-                            Vector3 targetPos = stepList[0].transform.position; //går mot första målet i listan
+                            Vector3 targetPos = stepList[0].GetComponent<StepScript>().entryPointPos; //går mot första målet i listan
                             transform.position = Vector3.MoveTowards(transform.position, targetPos, movementSpeed);
 
                             if (transform.position == targetPos) //Den har nått sin target!
