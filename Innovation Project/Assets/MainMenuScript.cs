@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Menu;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class MainMenuScript : MonoBehaviour
         CharacterMenu.SetActive(false);
         LevelMenu.SetActive(false);
         SetupMenu.SetActive(false);
+        GetComponent<MenuControllScript>().ChangeMenu();
+        GetComponent<MenuControllScript>().menuState = MenuState.MainMenu;
     }
 
     public void GetToCharacterSelect()
@@ -37,6 +40,8 @@ public class MainMenuScript : MonoBehaviour
         CharacterMenu.SetActive(true);
         LevelMenu.SetActive(false);
         SetupMenu.SetActive(false);
+        GetComponent<MenuControllScript>().ChangeMenu();
+        GetComponent<MenuControllScript>().menuState = MenuState.CharacterSelect;
     }
 
     public void GetToLevelSelect()
@@ -45,6 +50,8 @@ public class MainMenuScript : MonoBehaviour
         CharacterMenu.SetActive(false);
         LevelMenu.SetActive(true);
         SetupMenu.SetActive(false);
+        GetComponent<MenuControllScript>().ChangeMenu();
+        GetComponent<MenuControllScript>().menuState = MenuState.LevelSelect;
     }
 
     public void GoToSetup()
@@ -53,6 +60,8 @@ public class MainMenuScript : MonoBehaviour
         CharacterMenu.SetActive(false);
         LevelMenu.SetActive(false);
         SetupMenu.SetActive(true);
+        GetComponent<MenuControllScript>().ChangeMenu();
+        GetComponent<MenuControllScript>().menuState = MenuState.PlayerConnect;
     }
 
     public void StartLevel()
