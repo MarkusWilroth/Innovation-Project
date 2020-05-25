@@ -31,9 +31,10 @@ public class Trashcan : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trash"))
         {
+
             testTwo = collision.gameObject.GetComponent<MeshRenderer>();
             trashScript = collision.gameObject.GetComponent<Trash>();
-            if (trashScript.trashType == dumpsterHolder)
+            if (trashScript.trashType == dumpsterHolder && trashScript.held == false)
             {
                 aS.PlayOneShot(sound.Traffa, 0.5f);
                 if (trashScript.holder == 1)
@@ -54,7 +55,7 @@ public class Trashcan : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
             }
-            else
+            else if (trashScript.held == false)
             {
                 aS.PlayOneShot(sound.fel, 0.5f);
                 if (trashScript.holder == 1)

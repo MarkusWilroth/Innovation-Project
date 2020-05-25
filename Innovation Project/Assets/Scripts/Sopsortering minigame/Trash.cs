@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     public int holder;
+    public bool held = false;
     public TrashType trashType;
     
     Rigidbody rb;
@@ -30,9 +31,10 @@ public class Trash : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
        
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !held)
         {
             rb.useGravity = false;
+            held = true;
             if (collision.gameObject.name == "Player1")
             {
                 holder = 1;

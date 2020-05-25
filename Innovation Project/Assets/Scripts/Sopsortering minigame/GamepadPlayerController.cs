@@ -12,6 +12,7 @@ public class GamepadPlayerController : MonoBehaviour
     Rigidbody rigidbody;
     AudioSource playerAudio;
     Sounds sounds;
+    Trash held;
     public bool keepGoing;
     public bool activeCooldown = false;
     public bool holding = false;
@@ -87,6 +88,7 @@ public class GamepadPlayerController : MonoBehaviour
         {
             holding = true;
             hold = collision.gameObject;
+            held = hold.GetComponent<Trash>();
             collision.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
             collision.transform.parent = transform;
         }
@@ -132,6 +134,7 @@ public class GamepadPlayerController : MonoBehaviour
     }
     private void Drop()
     {
+        held.held = false;
         holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
@@ -142,7 +145,7 @@ public class GamepadPlayerController : MonoBehaviour
     }
     private void Throw()
     {
-
+        held.held = false;
         holding = false;
         hold.transform.parent = null;
         trashBody = hold.GetComponent<Rigidbody>();
