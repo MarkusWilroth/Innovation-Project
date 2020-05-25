@@ -17,7 +17,7 @@ public class GamepadPlayerController : MonoBehaviour
     public bool activeCooldown = false;
     public bool holding = false;
     public float speed = 5f;
-    float dashSpeed = 5f;
+    float dashSpeed = 2f;
     float xBoundary = 8.5f;
     float zBoundary = 7f;
     float lowZBoundary = -4f;
