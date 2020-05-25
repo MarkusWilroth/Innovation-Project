@@ -92,15 +92,14 @@ public class SetUpCharacter : MonoBehaviour
             {
                 verticalAxis = Input.GetAxisRaw(playerNr + "JoyVertical");
                 //Debug.Log("VerticalAxis: " + verticalAxis);
-                if (verticalAxis > oldVerticalAxis)
+                if (verticalAxis == 1)
                 {
                     oldVerticalAxis = verticalAxis;
-                    Debug.Log("Axis Value: " + oldVerticalAxis);
                     SwitchToChange(1);
                     isChangeable = false;
                     changeTimer = resetTime;
                 }
-                else if (verticalAxis < oldVerticalAxis)
+                else if (verticalAxis == -1)
                 {
                     oldVerticalAxis = verticalAxis;
                     SwitchToChange(-1);
