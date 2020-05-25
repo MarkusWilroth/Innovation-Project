@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 2677193934820263851}
   m_Layer: 0
   m_Name: SetupCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,7 +493,9 @@ MonoBehaviour:
   resetTime: 0
   lblReady: {fileID: 2035269858731707763, guid: ab56bd876cfebb94d9c843b2c2a0a761,
     type: 3}
+  connectScript: {fileID: 0}
   isReady: 0
+  occupiedSlot: 0
 --- !u!114 &2677193934820263848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +528,7 @@ MonoBehaviour:
   skin: {fileID: 0}
   armor: {fileID: 0}
   component: {fileID: 0}
+  stepId: 0
 --- !u!1 &2914551692096956331
 GameObject:
   m_ObjectHideFlags: 0

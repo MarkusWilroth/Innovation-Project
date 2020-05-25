@@ -23,6 +23,7 @@ public class MenuControllScript : MonoBehaviour
     */
     public Sprite[] markerTexture;
     public GameObject[] mainButtons, selectButtons, levelButtons, connectButtons;
+    public List<GameObject> playerList;
     public GameObject markerO;
     public MenuState menuState;
     public float switchCooldown;
@@ -105,24 +106,53 @@ public class MenuControllScript : MonoBehaviour
             }
             if (controllerCooldown[i - 1] <= 0)
             {
-                verticalAxis = Input.GetAxisRaw(i + "JoyVertical");
-                
-                if (verticalAxis == 1) 
+                bool canChange = true;
+                if (menuState == MenuState.PlayerConnect)
                 {
-                    ScrollMenu(-1, i, buttons.Length); //-1 för att den scrollar ner
-                    controllerCooldown[i - 1] = switchCooldown;
-                    //Debug.Log("Vertical pressed by Controll: " + i + "\nVerticalAxis: " + verticalAxis);
-                    //Debug.Log("Button: " + buttons[activeButton[i] - 1].name + "\ncontroller: " + i);
-                    UpdateMarker(i - 1, buttons[activeButton[i] - 1]);
+                    canChange = false;
 
-                } else if (verticalAxis == -1)
-                {
-                    ScrollMenu(1, i, buttons.Length);
-                    controllerCooldown[i - 1] = switchCooldown;
-                    //Debug.Log("Vertical pressed by Controll: " + i + "\nVerticalAxis: " + verticalAxis);
-                    //Debug.Log("Button: " + buttons[activeButton[i] - 1].name + "\ncontroller: " + i);
-                    UpdateMarker(i - 1, buttons[activeButton[i] - 1]);
+                    foreach(GameObject player in playerList)
+                    {
+                        if (player.GetComponent<PlayerScript>().playerNr == i)
+                        {
+                            if (player.GetComponent<SetUpCharacter>().isReady)
+                            {
+                                canChange = true;
+                            } else
+                            {
+                                activeButton[i] = 0;
+                                markers[i - 1].SetActive(false);
+                            }
+                            break;
+                        }
+                    }
+                    //Special thing
+                    //If player is Ready make change
                 }
+
+                if (canChange)
+                {
+                    verticalAxis = Input.GetAxisRaw(i + "JoyVertical");
+
+                    if (verticalAxis == 1)
+                    {
+                        ScrollMenu(-1, i, buttons.Length); //-1 för att den scrollar ner
+                        controllerCooldown[i - 1] = switchCooldown;
+                        //Debug.Log("Vertical pressed by Controll: " + i + "\nVerticalAxis: " + verticalAxis);
+                        //Debug.Log("Button: " + buttons[activeButton[i] - 1].name + "\ncontroller: " + i);
+                        UpdateMarker(i - 1, buttons[activeButton[i] - 1]);
+
+                    }
+                    else if (verticalAxis == -1)
+                    {
+                        ScrollMenu(1, i, buttons.Length);
+                        controllerCooldown[i - 1] = switchCooldown;
+                        //Debug.Log("Vertical pressed by Controll: " + i + "\nVerticalAxis: " + verticalAxis);
+                        //Debug.Log("Button: " + buttons[activeButton[i] - 1].name + "\ncontroller: " + i);
+                        UpdateMarker(i - 1, buttons[activeButton[i] - 1]);
+                    }
+                }
+                
             }
             verticalAxis = 0;
         }
@@ -157,31 +187,21 @@ public class MenuControllScript : MonoBehaviour
 
     private void ScrollMenu(int scrollfactor, int controller, int scrollLength)
     {
-        bool canChange = true;
-        if (menuState == MenuState.CharacterSelect)
+        if (activeButton[controller] == 0) //första gången kontrollen används denna meny
         {
-            canChange = false;
-            //Special thing
-            //If player is Ready make change
-        } 
-        if (canChange)
+            activeButton[controller] = 1; //Sätts till första knapppen
+        }
+        else
         {
-            if (activeButton[controller] == 0) //första gången kontrollen används denna meny
+            activeButton[controller] += scrollfactor;
+            if (activeButton[controller] <= 0) //Den har scrollat förbi slutet
             {
-                activeButton[controller] = 1; //Sätts till första knapppen
-            } else
-            {
-                activeButton[controller] += scrollfactor;
-                if (activeButton[controller] <= 0) //Den har scrollat förbi slutet
-                {
-                    activeButton[controller] = scrollLength;
-                }
-                else if (activeButton[controller] > scrollLength)
-                {
-                    activeButton[controller] = 1;
-                }
+                activeButton[controller] = scrollLength;
             }
-            
+            else if (activeButton[controller] > scrollLength)
+            {
+                activeButton[controller] = 1;
+            }
         }
     }
 

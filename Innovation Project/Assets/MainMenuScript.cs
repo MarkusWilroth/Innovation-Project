@@ -42,6 +42,7 @@ public class MainMenuScript : MonoBehaviour
         SetupMenu.SetActive(false);
         GetComponent<MenuControllScript>().ChangeMenu();
         GetComponent<MenuControllScript>().menuState = MenuState.CharacterSelect;
+        
     }
 
     public void GetToLevelSelect()

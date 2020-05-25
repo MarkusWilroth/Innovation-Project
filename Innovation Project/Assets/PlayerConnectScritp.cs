@@ -25,10 +25,10 @@ public class PlayerConnectScritp : MonoBehaviour
         pressHolder = new GameObject[characterSpawnPos.Length];
         for (int i = 0; i < characterSpawnPos.Length; i++)
         {
-            characterSpawnPos[i] = new Vector3(-520 + (372 * i), -200, -70);
+            characterSpawnPos[i] = new Vector3(-560 + (372 * i), -200, -70);
             pressHolder[i] = Instantiate(LblPressToJoin);
             
-            lblPos = new Vector2(characterSpawnPos[i].x - 40, characterSpawnPos[i].y + 220);
+            lblPos = new Vector2(characterSpawnPos[i].x, characterSpawnPos[i].y + 220);
             pressHolder[i].transform.position = lblPos;
             pressHolder[i].transform.SetParent(gameObject.transform, false);
         }
@@ -83,7 +83,7 @@ public class PlayerConnectScritp : MonoBehaviour
         holder.GetComponent<SetUpCharacter>().connectScript = this;
         
         playerList.Add(holder);
-
+        MasterMenu.GetComponent<MenuControllScript>().playerList = playerList;
         UpdateToJoin();
     }
 
@@ -116,7 +116,7 @@ public class PlayerConnectScritp : MonoBehaviour
         connectedControllers[player - 1] = 0;
         occupiedSpot[slot] = false;
         playerList.Remove(playerObj);
-
+        MasterMenu.GetComponent<MenuControllScript>().playerList = playerList;
         UpdateToJoin();
     }
 }

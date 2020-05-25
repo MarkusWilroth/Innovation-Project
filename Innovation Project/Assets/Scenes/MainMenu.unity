@@ -200,6 +200,7 @@ MonoBehaviour:
   connectButtons:
   - {fileID: 2031220279}
   - {fileID: 1883560876}
+  playerList: []
   markerO: {fileID: 3807327137942180602, guid: 5705f395902134c47954a8eddd23f023, type: 3}
   menuState: 0
   switchCooldown: 1
@@ -529,7 +530,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1075126953}
-  m_PlaneDistance: 1000
+  m_PlaneDistance: 200
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -880,7 +881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &612247031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1247,10 +1248,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 45.7
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 450.09
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1274,7 +1275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075126951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 517, y: 295, z: -1007}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

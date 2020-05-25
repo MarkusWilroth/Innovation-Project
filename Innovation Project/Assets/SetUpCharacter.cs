@@ -53,12 +53,16 @@ public class SetUpCharacter : MonoBehaviour
         axisValue = Input.GetAxisRaw(playerNr + "JoyVertical");
 
         lblReady = Instantiate(lblReady);
-        readyPos = new Vector2(transform.position.x, transform.position.y);
-        readyPos.x -= 590;
-        readyPos.y += 80;
+        readyPos = new Vector2(0, 0);
+        readyPos.x -= 0;
+        readyPos.y += 0.8f;
 
         lblReady.transform.position = readyPos;
-        lblReady.transform.SetParent(transform.parent.transform, false);
+        lblReady.transform.Rotate(0, 180, 0);
+        lblReady.transform.localScale = new Vector3(1,1,1);
+        lblReady.transform.SetParent(transform, false);
+        RectTransform rt = (RectTransform)lblReady.transform;
+        rt.sizeDelta = new Vector2(0.6f, 0.2f);
 
         lblReady.SetActive(false);
 
@@ -106,6 +110,7 @@ public class SetUpCharacter : MonoBehaviour
             }
             if (Input.GetButtonDown(playerNr + "B"))
             {
+                Debug.Log("Kokoko");
                 connectScript.DisconnectPlayer(playerNr, occupiedSlot, gameObject);
                 Destroy(gameObject);
             }
@@ -113,6 +118,17 @@ public class SetUpCharacter : MonoBehaviour
         
 
         if (Input.GetButtonDown(playerNr + "A"))
+        {
+            if (!isReady)
+            {
+                isReady = true;
+                GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
+                RotateToCamera();
+                lblReady.SetActive(true);
+            } 
+        }
+
+        if (Input.GetButtonDown(playerNr + "B"))
         {
             if (isReady)
             {
@@ -126,13 +142,6 @@ public class SetUpCharacter : MonoBehaviour
                         break;
                     }
                 }
-
-            } else
-            {
-                isReady = true;
-                GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
-                RotateToCamera();
-                lblReady.SetActive(true);
             }
         }
     }
@@ -221,7 +230,7 @@ public class SetUpCharacter : MonoBehaviour
     private void RotateToCamera()
     {
         GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        transform.LookAt(MainCamera.transform);
+        //transform.LookAt(MainCamera.transform);
     }
     
 }
