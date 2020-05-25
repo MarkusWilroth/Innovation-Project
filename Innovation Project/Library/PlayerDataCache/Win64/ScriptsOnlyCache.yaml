@@ -20,8 +20,6 @@ ScriptsOnlyBuild:
     - Trashcan
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -56,8 +54,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/Jack.unity:
     - Class: 1
@@ -101,41 +97,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11236}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11922}
+      Script: {instanceID: 11802}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12064}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12640}
+      Script: {instanceID: 12520}
     - Class: 114
-      Script: {instanceID: 12694}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13278}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13540}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13584}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13656}
     - Class: 114
-      Script: {instanceID: 13912}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 18260}
+      Script: {instanceID: 15774}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,31 +180,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12064}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 12824}
+      Script: {instanceID: 12704}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 13128}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13278}
+    - Class: 114
+      Script: {instanceID: 13672}
+    - Class: 114
+      Script: {instanceID: 13698}
     - Class: 114
       Script: {instanceID: 13792}
-    - Class: 114
-      Script: {instanceID: 13818}
-    - Class: 114
-      Script: {instanceID: 13912}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -648,7 +644,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: c7a802ef7f40f13e7e45643c8323f00c
+      Hash: c6baa419118c1e0b09a21796b17ccd63
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuControllScript
@@ -852,7 +848,7 @@ ScriptsOnlyBuild:
     className: GamepadPlayer4Controller
   - hash:
       serializedVersion: 2
-      Hash: e153bd4ac7fb713f18d4b887e7acb59f
+      Hash: 8f3237d7511c2468fdb7956cb8c8c1d9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Trash
