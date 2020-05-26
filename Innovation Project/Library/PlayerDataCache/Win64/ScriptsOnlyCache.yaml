@@ -964,4 +964,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Jack.unity
-  playerPath: C:/Users/Flugan/Innovation-Project/TestBuild/Innovation Project.exe
+  playerPath: C:/Users/Flugan/Innovation-Project/The Game/Innovation Project.exe
