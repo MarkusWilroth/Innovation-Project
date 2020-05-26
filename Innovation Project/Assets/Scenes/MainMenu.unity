@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &477015510
 RectTransform:
   m_ObjectHideFlags: 0
@@ -924,6 +924,8 @@ MonoBehaviour:
   LblReady: {fileID: 2035269858731707763, guid: ab56bd876cfebb94d9c843b2c2a0a761,
     type: 3}
   MasterMenu: {fileID: 154535280}
+  CharacterBox: {fileID: 1160046560644366770, guid: 6a8615ce59877cc4fab51888b044132d,
+    type: 3}
 --- !u!1 &797443141
 GameObject:
   m_ObjectHideFlags: 0

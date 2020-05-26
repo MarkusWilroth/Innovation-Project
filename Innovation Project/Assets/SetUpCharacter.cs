@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using Random = UnityEngine.Random;
 
@@ -16,6 +17,8 @@ public class SetUpCharacter : MonoBehaviour
     public GameObject lblReady;
     private Vector2 readyPos;
     public PlayerConnectScritp connectScript;
+
+    public SetupBox setUpBoxScript;
 
     public bool isReady;
     public int occupiedSlot; //Vilken ruta karaktären är i
@@ -44,7 +47,9 @@ public class SetUpCharacter : MonoBehaviour
         component.color = colors[Random.Range(0, colors.Length)];
         limb.color = colors[Random.Range(0, colors.Length)];
 
-        RotateToCamera();
+        UpdateBoxColors();
+
+        //RotateToCamera();
         
         toChange = ThingToChange.armorColor;
         isChangeable = true;
@@ -53,20 +58,22 @@ public class SetUpCharacter : MonoBehaviour
         axisValue = Input.GetAxisRaw(playerNr + "JoyVertical");
 
         lblReady = Instantiate(lblReady);
-        readyPos = new Vector2(0, 0);
-        readyPos.x -= 0;
-        readyPos.y += 0.8f;
+        readyPos = new Vector3(55, 240, -1);
+        //readyPos.x -= 0.11f;
+        //readyPos.y += 0.47f;
 
         lblReady.transform.position = readyPos;
-        lblReady.transform.Rotate(0, 180, 0);
+        //lblReady.transform.Rotate(0, 180, 0);
         lblReady.transform.localScale = new Vector3(1,1,1);
-        lblReady.transform.SetParent(transform, false);
+        lblReady.transform.SetParent(transform.parent.transform, false);
         RectTransform rt = (RectTransform)lblReady.transform;
-        rt.sizeDelta = new Vector2(0.6f, 0.2f);
+        rt.sizeDelta = new Vector2(300, 80);
 
         lblReady.SetActive(false);
 
         oldVerticalAxis = Input.GetAxisRaw(playerNr + "JoyVertical");
+
+        UpdateHighlightBox();
     }
 
     private void Update()
@@ -109,9 +116,8 @@ public class SetUpCharacter : MonoBehaviour
             }
             if (Input.GetButtonDown(playerNr + "B"))
             {
-                Debug.Log("Kokoko");
                 connectScript.DisconnectPlayer(playerNr, occupiedSlot, gameObject);
-                Destroy(gameObject);
+                Destroy(gameObject.transform.parent.transform.gameObject);
             }
         }
         
@@ -124,12 +130,13 @@ public class SetUpCharacter : MonoBehaviour
                 GetComponent<PlayerScript>().CreateCharacter(playerNr, limb, skin, armor, component, "James");
                 RotateToCamera();
                 lblReady.SetActive(true);
+                setUpBoxScript.NoneActive();
             } 
         }
 
-        if (Input.GetButtonDown(playerNr + "B"))
+        if (Input.GetButtonDown(playerNr + "B")) //Om spelaren klickar på bakåt knappen
         {
-            if (isReady)
+            if (isReady) //Om spelaren är redo ska den tas bort från ScoreScript och sättas som oredo
             {
                 isReady = false;
                 lblReady.SetActive(false);
@@ -141,18 +148,29 @@ public class SetUpCharacter : MonoBehaviour
                         break;
                     }
                 }
+                toChange = ThingToChange.armorColor;
+                UpdateHighlightBox();
             }
         }
+        UpdateBoxColors();
+    }
+
+    private void UpdateBoxColors()
+    {
+        setUpBoxScript.ArmorColor.GetComponent<Image>().color = armor.color;
+        setUpBoxScript.BodyColor.GetComponent<Image>().color = skin.color;
+        setUpBoxScript.LimbColor.GetComponent<Image>().color = limb.color;
+        setUpBoxScript.ComponentsColor.GetComponent<Image>().color = component.color;
     }
 
     private void SwitchToChange(int modifier)
     {
         if (modifier > 0)
         {
-            toChange++;
+            toChange--;
         } else
         {
-            toChange--;
+            toChange++;
         }
         if (toChange > ThingToChange.rotate)
         {
@@ -161,7 +179,31 @@ public class SetUpCharacter : MonoBehaviour
         {
             toChange = ThingToChange.rotate;
         }
+        UpdateHighlightBox();
     }
+
+    private void UpdateHighlightBox()
+    {
+        switch(toChange)
+        {
+            case ThingToChange.rotate:
+                setUpBoxScript.ActiveRotation();
+                break;
+            case ThingToChange.armorColor:
+                setUpBoxScript.ActiveArmor();
+                break;
+            case ThingToChange.skinColor:
+                setUpBoxScript.ActiveBody();
+                break;
+            case ThingToChange.limbColor:
+                setUpBoxScript.ActiveLimb();
+                break;
+            case ThingToChange.componentColor:
+                setUpBoxScript.ActiveComponents();
+                break;
+        }
+    }
+
     private void AlterCharacter(int modifier)
     {
         switch (toChange)
@@ -177,6 +219,7 @@ public class SetUpCharacter : MonoBehaviour
                 }
                 
                 armor.color = colors[armorCounter];
+                setUpBoxScript.ArmorColor.GetComponent<Image>().color = colors[armorCounter];
                 break;
             case ThingToChange.skinColor:
                 skinCounter += modifier;
@@ -190,6 +233,7 @@ public class SetUpCharacter : MonoBehaviour
                 }
 
                 skin.color = colors[skinCounter];
+                setUpBoxScript.BodyColor.GetComponent<Image>().color = colors[armorCounter];
                 break;
             case ThingToChange.limbColor:
                 limbCounter += modifier;
@@ -203,6 +247,7 @@ public class SetUpCharacter : MonoBehaviour
                 }
 
                 limb.color = colors[limbCounter];
+                setUpBoxScript.LimbColor.GetComponent<Image>().color = colors[armorCounter];
                 break;
             case ThingToChange.componentColor:
                 compCounter += modifier;
@@ -216,6 +261,7 @@ public class SetUpCharacter : MonoBehaviour
                 }
 
                 component.color = colors[compCounter];
+                setUpBoxScript.ComponentsColor.GetComponent<Image>().color = colors[armorCounter];
                 break;
             case ThingToChange.rotate:
                 transform.Rotate(0, 90 * modifier, 0);

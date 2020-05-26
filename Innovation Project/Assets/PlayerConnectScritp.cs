@@ -10,10 +10,11 @@ public class PlayerConnectScritp : MonoBehaviour
     public GameObject LblPressToJoin;
     public GameObject LblReady;
     public GameObject MasterMenu;
+    public GameObject CharacterBox;
 
     private Vector3[] characterSpawnPos = new Vector3[4];
     private GameObject[] pressHolder;
-    private GameObject holder;
+    private GameObject holderCharacter, holderBox;
     private List<GameObject> playerList;
 
     private Vector2 lblPos;
@@ -25,10 +26,10 @@ public class PlayerConnectScritp : MonoBehaviour
         pressHolder = new GameObject[characterSpawnPos.Length];
         for (int i = 0; i < characterSpawnPos.Length; i++)
         {
-            characterSpawnPos[i] = new Vector3(-560 + (372 * i), -200, -70);
+            characterSpawnPos[i] = new Vector3(-615 + (372 * i), -35, 0);
             pressHolder[i] = Instantiate(LblPressToJoin);
             
-            lblPos = new Vector2(characterSpawnPos[i].x, characterSpawnPos[i].y + 220);
+            lblPos = new Vector2(characterSpawnPos[i].x + 60, characterSpawnPos[i].y + 30);
             pressHolder[i].transform.position = lblPos;
             pressHolder[i].transform.SetParent(gameObject.transform, false);
         }
@@ -66,23 +67,31 @@ public class PlayerConnectScritp : MonoBehaviour
 
     private void SpawnCharacter(int player) //Kommer behöva föra om denna ifall vi ska kunna disconnecta kontroller
     {
-        holder = Instantiate(SetupCharacter);
+        
         for (int i = 0; i < occupiedSpot.Length; i++)
         {
             if (!occupiedSpot[i]) //Platsen används inte
             {
-                holder.transform.position = characterSpawnPos[i];
-                holder.GetComponent<SetUpCharacter>().occupiedSlot = i;
+                holderBox = Instantiate(CharacterBox);
+                holderBox.transform.position = characterSpawnPos[i];
+                holderBox.transform.SetParent(transform, false);
+
+                holderCharacter = Instantiate(SetupCharacter);
+                holderCharacter.GetComponent<SetUpCharacter>().occupiedSlot = i;
+                holderCharacter.GetComponent<SetUpCharacter>().setUpBoxScript = holderBox.GetComponent<SetupBox>();
+                holderCharacter.transform.position = new Vector3(0, -170, 0);
+                holderCharacter.transform.SetParent(holderBox.transform, false);
+                
                 occupiedSpot[i] = true;
                 break;
             }
         }
         
-        holder.transform.SetParent(gameObject.transform, false);
-        holder.GetComponent<SetUpCharacter>().playerNr = player;
-        holder.GetComponent<SetUpCharacter>().connectScript = this;
+        //holderCharacter.transform.SetParent(gameObject.transform, false);
+        holderCharacter.GetComponent<SetUpCharacter>().playerNr = player;
+        holderCharacter.GetComponent<SetUpCharacter>().connectScript = this;
         
-        playerList.Add(holder);
+        playerList.Add(holderCharacter);
         MasterMenu.GetComponent<MenuControllScript>().playerList = playerList;
         UpdateToJoin();
     }
