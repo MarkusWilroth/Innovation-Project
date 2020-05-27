@@ -11,7 +11,7 @@ public class SetUpCharacter : MonoBehaviour
     private Color[] colors;
     public int playerNr;
     private int armorCounter, skinCounter, limbCounter, compCounter, changeCounter;
-    public int resetTime;
+    public float resetTime;
     private float verticalAxis, oldVerticalAxis, axisValue, changeTimer;
     private bool isChangeable;
     public GameObject lblReady;
@@ -53,7 +53,6 @@ public class SetUpCharacter : MonoBehaviour
         
         toChange = ThingToChange.armorColor;
         isChangeable = true;
-        resetTime = 1;
 
         axisValue = Input.GetAxisRaw(playerNr + "JoyVertical");
 
@@ -187,19 +186,19 @@ public class SetUpCharacter : MonoBehaviour
         switch(toChange)
         {
             case ThingToChange.rotate:
-                setUpBoxScript.ActiveRotation();
+                setUpBoxScript.SwitchActiveBox(setUpBoxScript.RotationBox);
                 break;
             case ThingToChange.armorColor:
-                setUpBoxScript.ActiveArmor();
+                setUpBoxScript.SwitchActiveBox(setUpBoxScript.ArmorBox);
                 break;
             case ThingToChange.skinColor:
-                setUpBoxScript.ActiveBody();
+                setUpBoxScript.SwitchActiveBox(setUpBoxScript.BodyBox);
                 break;
             case ThingToChange.limbColor:
-                setUpBoxScript.ActiveLimb();
+                setUpBoxScript.SwitchActiveBox(setUpBoxScript.LimbBox);
                 break;
             case ThingToChange.componentColor:
-                setUpBoxScript.ActiveComponents();
+                setUpBoxScript.SwitchActiveBox(setUpBoxScript.ComponentsBox);
                 break;
         }
     }

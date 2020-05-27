@@ -7,6 +7,7 @@ public class SetupBox : MonoBehaviour
 {
     public GameObject RotationBox, ArmorBox, BodyBox, LimbBox, ComponentsBox;
     public GameObject ArmorColor, BodyColor, LimbColor, ComponentsColor;
+    public GameObject ActiveBox;
 
     private Color activeColor, notActiveColor;
 
@@ -15,56 +16,19 @@ public class SetupBox : MonoBehaviour
         activeColor = Color.white;
         notActiveColor = Color.black;
     }
-    //Borde göra denna del med att spara active och old för att endast ändra färg på de relevanta
-    #region UpdateHighlight
-    public void ActiveRotation()
-    {
-        RotationBox.GetComponent<Image>().color = activeColor;
-        ArmorBox.GetComponent<Image>().color = notActiveColor;
-        BodyBox.GetComponent<Image>().color = notActiveColor;
-        LimbBox.GetComponent<Image>().color = notActiveColor;
-        ComponentsBox.GetComponent<Image>().color = notActiveColor;
-    }
-    public void ActiveArmor()
-    {
-        RotationBox.GetComponent<Image>().color = notActiveColor;
-        ArmorBox.GetComponent<Image>().color = activeColor;
-        BodyBox.GetComponent<Image>().color = notActiveColor;
-        LimbBox.GetComponent<Image>().color = notActiveColor;
-        ComponentsBox.GetComponent<Image>().color = notActiveColor;
-    }
-    public void ActiveBody()
-    {
-        RotationBox.GetComponent<Image>().color = notActiveColor;
-        ArmorBox.GetComponent<Image>().color = notActiveColor;
-        BodyBox.GetComponent<Image>().color = activeColor;
-        LimbBox.GetComponent<Image>().color = notActiveColor;
-        ComponentsBox.GetComponent<Image>().color = notActiveColor;
-    }
-    public void ActiveLimb()
-    {
-        RotationBox.GetComponent<Image>().color = notActiveColor;
-        ArmorBox.GetComponent<Image>().color = notActiveColor;
-        BodyBox.GetComponent<Image>().color = notActiveColor;
-        LimbBox.GetComponent<Image>().color = activeColor;
-        ComponentsBox.GetComponent<Image>().color = notActiveColor;
-    }
-    public void ActiveComponents()
-    {
-        RotationBox.GetComponent<Image>().color = notActiveColor;
-        ArmorBox.GetComponent<Image>().color = notActiveColor;
-        BodyBox.GetComponent<Image>().color = notActiveColor;
-        LimbBox.GetComponent<Image>().color = notActiveColor;
-        ComponentsBox.GetComponent<Image>().color = activeColor;
-    }
 
+    public void SwitchActiveBox(GameObject newActiveBox)
+    {
+        if (ActiveBox != null)
+        {
+            ActiveBox.GetComponent<Image>().color = notActiveColor;
+        }
+        ActiveBox = newActiveBox;
+        ActiveBox.GetComponent<Image>().color = activeColor;
+    }
+    
     public void NoneActive()
     {
-        RotationBox.GetComponent<Image>().color = notActiveColor;
-        ArmorBox.GetComponent<Image>().color = notActiveColor;
-        BodyBox.GetComponent<Image>().color = notActiveColor;
-        LimbBox.GetComponent<Image>().color = notActiveColor;
-        ComponentsBox.GetComponent<Image>().color = notActiveColor;
+        ActiveBox.GetComponent<Image>().color = notActiveColor;
     }
-    #endregion
 }
