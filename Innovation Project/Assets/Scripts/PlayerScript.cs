@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviour
 
         points = 0;
         gold = 0;
-
+        
         //ScoreScript.scoreScript.LoadPlayerScript(this.playerNr, this.limb, this.skin, this.armor, this.component, strName);
         ScoreScript.scoreScript.LoadPlayerScript(this);
     }

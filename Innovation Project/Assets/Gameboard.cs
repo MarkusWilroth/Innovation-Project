@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Step;
+using BoardCamera;
 
 public class Gameboard : MonoBehaviour
 {
     public GameObject characterPrefab;
+    public GameObject MainCamera;
+    public Material testMat;
     public int testCharacters;
 
     private List<GameObject> characterList;
@@ -40,6 +43,11 @@ public class Gameboard : MonoBehaviour
 
         if (ScoreScript.scoreScript == null) //Kommer inte från start menyn (testing)
         {
+            ScoreScript.scoreScript = new ScoreScript();
+            ScoreScript.scoreScript.StartWorld();
+
+            MainCamera.GetComponent<BoardCamearMovement>().cameraState = BoardCamearMovement.CameraState.introState;
+
             for (int i = 0; i < testCharacters; i++)
             {
                 holder = Instantiate(characterPrefab);
@@ -48,8 +56,21 @@ public class Gameboard : MonoBehaviour
                 holder.GetComponent<BoardPlayerScript>().SpawnCharacter(this, steps);
                 characterList.Add(holder);
                 startStep.GetComponent<StepScript>().AddCharacter(holder);
+                holder.GetComponent<PlayerScript>().CreateCharacter(i, testMat, testMat, testMat, testMat, "Test" + i);
             }
             GetPLayerOrder();
+        } else
+        {
+            MainCamera.GetComponent<BoardCamearMovement>().cameraState = BoardCamearMovement.CameraState.loadState; //Kommer behövas en bool i Scorescript
+            foreach (PlayerScript playerScript in ScoreScript.scoreScript.playerScripts)
+            {
+                holder = Instantiate(characterPrefab);
+                holder.GetComponent<PlayerScript>().LoadCharacter(playerScript.playerNr, playerScript.limb, playerScript.skin, playerScript.armor, playerScript.component, playerScript.strName);
+                holder.GetComponent<PlayerScript>().stepId = startStep.GetComponent<StepScript>().stepId;
+                holder.GetComponent<BoardPlayerScript>().SpawnCharacter(this, steps);
+                characterList.Add(holder);
+                startStep.GetComponent<StepScript>().AddCharacter(holder);
+            }
         }
 
         characterOrder[playerTurn].GetComponent<BoardPlayerScript>().GetTurn();

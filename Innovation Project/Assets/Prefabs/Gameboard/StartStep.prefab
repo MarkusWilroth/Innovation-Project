@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927702237461521924}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -314690566096779277, guid: ffeccd466e89ee94c936c5908d858d19, type: 3}
 --- !u!23 &8337621370571898900
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108,3 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepId: 0
   CharacterOnStepList: []
+  stepType: 0
+  characterPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  entryPointPos: {x: 0, y: 0, z: 0}

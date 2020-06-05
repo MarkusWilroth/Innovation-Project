@@ -16,6 +16,8 @@ namespace Step
     {
         public int stepId; //Används för att se till att spelaren går frammåt
         public List<GameObject> CharacterOnStepList;
+        public GameObject[] nextStep;
+        public bool chooseStep;
         public StepType stepType;
         private float spaceOffsetH = 2f, spaceOffsetV = 1.7f;
 
