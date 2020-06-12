@@ -18,7 +18,9 @@ namespace BoardCamera
 
         public CameraState cameraState;
         public float speed;
-        public int mapRotation, alterRotation, walkingRotation, xRotation, yRotation;
+        public int mapRotation, alterRotation, walkingRotation, mapY, alterY, walkY;
+        private int xRotation, yRotation;
+        private float yPos;
         private Camera mainCamera;
 
         public Vector3 mapPos;
@@ -52,10 +54,17 @@ namespace BoardCamera
                     if (isMoving)
                     {
                         xRotation = alterRotation;
+                        yPos = alterY;
                         MoveTarget();
                     }
                     break;
                 case CameraState.povState:
+                    if (isMoving)
+                    {
+                        xRotation = walkingRotation;
+                        yPos = walkY;
+                        MoveTarget();
+                    }
                     break;
                 case CameraState.mapState:
                     break;
@@ -69,13 +78,11 @@ namespace BoardCamera
         {
             if (cameraTargetPos != null)
             {
-
                 transform.position = Vector3.MoveTowards(transform.position, cameraTargetPos, speed);
                 Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), speed);
 
                 if (transform.position == cameraTargetPos && transform.rotation == Quaternion.Euler(xRotation, yRotation, 0))
                 {
-                    Debug.Log("In right position and rotation!");
                     isMoving = false;
                 }
             }
@@ -89,7 +96,7 @@ namespace BoardCamera
         public void GetTargetPos(Vector3 moveTarget)
         {
             cameraTargetPos = moveTarget;
-            cameraTargetPos.y = transform.position.y;
+            cameraTargetPos.y = yPos;
             isMoving = true;
         }
     }

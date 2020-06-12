@@ -22,7 +22,7 @@ public class BoardPlayerScript : MonoBehaviour
         walk
     }
 
-    public float movementSpeed;
+    public float movementSpeed, cameraOffset;
     public GameObject ChoiceMarker;
     private BoardCameraMovement boardCameraMovement;
 
@@ -32,6 +32,7 @@ public class BoardPlayerScript : MonoBehaviour
     private bool isPlayerTurn, hasTarget;
     private int playerNr, choiceNr;
     private Gameboard gameboard;
+    private Vector3 cameraPos;
 
     private List<GameObject> stepList; //De steg karaktären kommer gå till (För att den inte ska gena vid korsningar)
     private GameObject[] allSteps;
@@ -56,6 +57,7 @@ public class BoardPlayerScript : MonoBehaviour
         boardCameraMovement = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BoardCameraMovement>();
 
         playerNr = GetComponent<PlayerScript>().playerNr;
+        cameraPos = new Vector3(0, 0, 0);
 
         foreach (GameObject step in allSteps)
         {
@@ -129,6 +131,7 @@ public class BoardPlayerScript : MonoBehaviour
         int dieRoll = Random.Range(1, 7); //Tar positionen den står på och lägger till tärningsslaget för att få fram nästa steg
         moveLength = dieRoll;
         playerMove = PlayerMove.getSteps;
+        gameboard.GetRoll("Rolled: " + dieRoll);
     }
 
     private void GetTargetSteps() //Nästa som händer tar den fram de möjliga dragen
@@ -142,6 +145,7 @@ public class BoardPlayerScript : MonoBehaviour
 
     private void SpawnChoiceMarkers()
     {
+        choiceMarkerList = new List<GameObject>();
         if (allRouteList.Count > 1)
         {
             foreach (List<GameObject> stepList in allRouteList)
@@ -158,14 +162,18 @@ public class BoardPlayerScript : MonoBehaviour
     {
         if (allRouteList.Count > 1)
         {
-            if (playerNr >= 3)
+            if (playerNr >= 3) //Har bara två konroller denna bit måste ändras när vi är redo
             {
                 int rand = Random.Range(0, allRouteList.Count);
                 stepList = allRouteList[rand];
                 DestroyMarkers();
                 playerMove = PlayerMove.walk;
+                boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
+                return;
             }
-            boardCameraMovement.GetTargetPos(choiceMarkerList[choiceNr].transform.position);
+            cameraPos = choiceMarkerList[choiceNr].transform.position;
+            cameraPos.x -= cameraOffset;
+            boardCameraMovement.GetTargetPos(cameraPos);
             if (Input.GetButtonDown(playerNr+"R1"))
             {
                 choiceNr++;
@@ -185,26 +193,34 @@ public class BoardPlayerScript : MonoBehaviour
                 stepList = allRouteList[choiceNr];
                 DestroyMarkers();
                 playerMove = PlayerMove.walk;
+                boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
             }
         }
         else
         {
             stepList = allRouteList[0];
             playerMove = PlayerMove.walk;
+            boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
         }
     }
 
     private void DestroyMarkers()
     {
+        
         foreach (GameObject marker in choiceMarkerList)
         {
             Destroy(marker.gameObject);
         }
         choiceMarkerList.Clear();
+        
     }
 
     private void MoveOnBoard() //Sen går karaktären den valda vägen
     {
+        cameraPos = transform.position;
+        cameraPos.x -= 10;
+        boardCameraMovement.GetTargetPos(cameraPos);
+
         if (stepList.Count != 0)
         {
 
@@ -223,6 +239,7 @@ public class BoardPlayerScript : MonoBehaviour
             //targetStep.GetComponent<StepScript>().AddCharacter(gameObject);
             stepList.Clear();
             playerPhase = PlayerPhase.eventPhase;
+            boardCameraMovement.cameraState = BoardCameraMovement.CameraState.alterState;
         }
     }
 
@@ -337,6 +354,8 @@ public class BoardPlayerScript : MonoBehaviour
         playerMove = PlayerMove.rollDie;
         targetStep = activeStep;
         choiceNr = 0;
+
+        gameboard.GetPlayerTurn("Player " + playerNr + "'s turn!");
         //routeList.Clear();
         //allRouteList.Clear();
     }

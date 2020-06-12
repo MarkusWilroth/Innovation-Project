@@ -9,6 +9,7 @@ TagManager:
   - Trashcan
   - RouteMaster
   - Step
+  - GameMaster
   layers:
   - Default
   - TransparentFX

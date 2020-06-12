@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Step;
 using BoardCamera;
 
@@ -15,7 +16,11 @@ public class Gameboard : MonoBehaviour
     private GameObject[] steps, characterOrder;
     private GameObject holder, startStep;
 
+    public Text playerText, rollText;
+
     private int playerTurn;
+    public float eventTimer;
+    private float timer;
 
     
 
@@ -30,6 +35,7 @@ public class Gameboard : MonoBehaviour
     {
         characterList = new List<GameObject>();
         playerTurn = 0;
+        rollText.text = "";
 
         steps = GameObject.FindGameObjectsWithTag("Step");
         foreach (GameObject step in steps)
@@ -101,9 +107,23 @@ public class Gameboard : MonoBehaviour
         characterOrder[playerTurn].GetComponent<BoardPlayerScript>().GetTurn();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GetPlayerTurn(string playerTurn)
     {
-        
+        playerText.text = playerTurn;
+    }
+
+    public void GetRoll(string eventString)
+    {
+        rollText.text = eventString;
+        timer = 0;
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= eventTimer)
+        {
+            rollText.text = "";
+        }
     }
 }
