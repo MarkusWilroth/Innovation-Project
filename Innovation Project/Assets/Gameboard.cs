@@ -46,9 +46,9 @@ public class Gameboard : MonoBehaviour
             ScoreScript.scoreScript = new ScoreScript();
             ScoreScript.scoreScript.StartWorld();
 
-            MainCamera.GetComponent<BoardCamearMovement>().cameraState = BoardCamearMovement.CameraState.introState;
+            MainCamera.GetComponent<BoardCameraMovement>().cameraState = BoardCameraMovement.CameraState.introState;
 
-            for (int i = 0; i < testCharacters; i++)
+            for (int i = 1; i <= testCharacters; i++)
             {
                 holder = Instantiate(characterPrefab);
                 holder.GetComponent<PlayerScript>().stepId = startStep.GetComponent<StepScript>().stepId;
@@ -61,7 +61,7 @@ public class Gameboard : MonoBehaviour
             GetPLayerOrder();
         } else
         {
-            MainCamera.GetComponent<BoardCamearMovement>().cameraState = BoardCamearMovement.CameraState.loadState; //Kommer behövas en bool i Scorescript
+            MainCamera.GetComponent<BoardCameraMovement>().cameraState = BoardCameraMovement.CameraState.loadState; //Kommer behövas en bool i Scorescript
             foreach (PlayerScript playerScript in ScoreScript.scoreScript.playerScripts)
             {
                 holder = Instantiate(characterPrefab);

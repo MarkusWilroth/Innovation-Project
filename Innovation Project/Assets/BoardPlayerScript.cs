@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BoardCamera;
 using Step;
 
 public class BoardPlayerScript : MonoBehaviour
@@ -22,17 +23,21 @@ public class BoardPlayerScript : MonoBehaviour
     }
 
     public float movementSpeed;
+    public GameObject ChoiceMarker;
+    private BoardCameraMovement boardCameraMovement;
 
     private PlayerPhase playerPhase;
     private PlayerMove playerMove;
     private Node node;
     private bool isPlayerTurn, hasTarget;
+    private int playerNr, choiceNr;
     private Gameboard gameboard;
 
     private List<GameObject> stepList; //De steg karaktären kommer gå till (För att den inte ska gena vid korsningar)
     private GameObject[] allSteps;
     private GameObject targetStep, activeStep;
     private List<Node> nodeList;
+    private List<GameObject> choiceMarkerList;
 
     private List<GameObject> routeList, pickedRoute, pathList;
     private List<List<GameObject>> allRouteList;
@@ -46,6 +51,11 @@ public class BoardPlayerScript : MonoBehaviour
         stepList = new List<GameObject>();
         routeList = new List<GameObject>();
         allRouteList = new List<List<GameObject>>();
+        choiceMarkerList = new List<GameObject>();
+
+        boardCameraMovement = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BoardCameraMovement>();
+
+        playerNr = GetComponent<PlayerScript>().playerNr;
 
         foreach (GameObject step in allSteps)
         {
@@ -82,14 +92,16 @@ public class BoardPlayerScript : MonoBehaviour
                     switch (playerMove)
                     {
                         case PlayerMove.rollDie:
-                            Debug.Log("---------- New Player Turn ----------");
                             RollDie();
                             break;
                         case PlayerMove.getSteps:
                             GetTargetSteps();
                             break;
                         case PlayerMove.chooseRoute:
-                            ChooseStepPath();
+                            if (boardCameraMovement.cameraState == BoardCameraMovement.CameraState.alterState)
+                            {
+                                ChooseStepPath();
+                            }
                             break;
                         case PlayerMove.walk:
                             MoveOnBoard();
@@ -116,7 +128,6 @@ public class BoardPlayerScript : MonoBehaviour
         
         int dieRoll = Random.Range(1, 7); //Tar positionen den står på och lägger till tärningsslaget för att få fram nästa steg
         moveLength = dieRoll;
-        Debug.Log("Rolled: " + dieRoll);
         playerMove = PlayerMove.getSteps;
     }
 
@@ -125,35 +136,71 @@ public class BoardPlayerScript : MonoBehaviour
         pathList.Add(activeStep);
         RecursiveStep(activeStep);
         ClearNodes();
+        SpawnChoiceMarkers();
         playerMove = PlayerMove.chooseRoute;
+    }
+
+    private void SpawnChoiceMarkers()
+    {
+        if (allRouteList.Count > 1)
+        {
+            foreach (List<GameObject> stepList in allRouteList)
+            {
+                GameObject holder = Instantiate(ChoiceMarker);
+                holder.transform.SetParent(stepList[stepList.Count - 1].transform, false);
+                holder.transform.localPosition = new Vector3(0, 1, 0);
+                choiceMarkerList.Add(holder);
+            }
+        }
     }
 
     private void ChooseStepPath() //Sen väljs vilken väg som kan gå
     {
-        
         if (allRouteList.Count > 1)
         {
-            int i = 0;
-            foreach (List<GameObject> stepList in allRouteList)
+            if (playerNr >= 3)
             {
-                Debug.Log("Check stepList[" + i + "]");
-                foreach (GameObject step in stepList)
-                {
-                    Debug.Log("Step: " + step.name);
-                }
-                i++;
+                int rand = Random.Range(0, allRouteList.Count);
+                stepList = allRouteList[rand];
+                DestroyMarkers();
+                playerMove = PlayerMove.walk;
             }
-            int rand = Random.Range(0, allRouteList.Count);
-            Debug.Log("-----Rand: " + rand + "-----");
-            stepList = allRouteList[rand];
-            //Debug.Log("first step in list: " + stepList[0]);
+            boardCameraMovement.GetTargetPos(choiceMarkerList[choiceNr].transform.position);
+            if (Input.GetButtonDown(playerNr+"R1"))
+            {
+                choiceNr++;
+                if (choiceNr >= allRouteList.Count)
+                {
+                    choiceNr = 0;
+                }
+            } else if (Input.GetButtonDown(playerNr + "L1"))
+            {
+                choiceNr--;
+                if (choiceNr < 0)
+                {
+                    choiceNr = allRouteList.Count - 1;
+                }
+            } else if (Input.GetButtonDown(playerNr + "X"))
+            {
+                stepList = allRouteList[choiceNr];
+                DestroyMarkers();
+                playerMove = PlayerMove.walk;
+            }
         }
         else
         {
             stepList = allRouteList[0];
+            playerMove = PlayerMove.walk;
         }
+    }
 
-        playerMove = PlayerMove.walk;
+    private void DestroyMarkers()
+    {
+        foreach (GameObject marker in choiceMarkerList)
+        {
+            Destroy(marker.gameObject);
+        }
+        choiceMarkerList.Clear();
     }
 
     private void MoveOnBoard() //Sen går karaktären den valda vägen
@@ -289,6 +336,7 @@ public class BoardPlayerScript : MonoBehaviour
         playerPhase = PlayerPhase.itemPhase;
         playerMove = PlayerMove.rollDie;
         targetStep = activeStep;
+        choiceNr = 0;
         //routeList.Clear();
         //allRouteList.Clear();
     }
