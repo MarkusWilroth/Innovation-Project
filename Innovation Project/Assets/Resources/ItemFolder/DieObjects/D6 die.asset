@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e3065a8cb81344a8e24becd32d5427, type: 3}
+  m_Name: D6 die
+  m_EditorClassIdentifier: 
+  itemName: D6 die
+  itemDesc: A die with 6 sides, 1-6
+  itemID: do2
+  soundID: Needed?
+  cost: 175
+  itemTier: 3
+  icon: {fileID: 0}
+  dieEyes: 010000000200000003000000040000000500000006000000

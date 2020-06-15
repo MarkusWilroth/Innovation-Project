@@ -4,18 +4,15 @@ using UnityEngine;
 using BoardCamera;
 using Step;
 
-public class BoardPlayerScript : MonoBehaviour
-{
-    private enum PlayerPhase
-    {
+public class BoardPlayerScript : MonoBehaviour {
+    private enum PlayerPhase {
         itemPhase,
         movePhase,
         eventPhase,
         endPhase
     }
 
-    private enum PlayerMove
-    {
+    private enum PlayerMove {
         rollDie,
         getSteps,
         chooseRoute,
@@ -29,9 +26,10 @@ public class BoardPlayerScript : MonoBehaviour
     private PlayerPhase playerPhase;
     private PlayerMove playerMove;
     private Node node;
-    private bool isPlayerTurn, hasTarget;
+    private bool isPlayerTurn, hasTarget, hasRolled;
     private int playerNr, choiceNr;
     private Gameboard gameboard;
+    private DieManagerScript dieManagerScript;
     private Vector3 cameraPos;
 
     private List<GameObject> stepList; //De steg karaktären kommer gå till (För att den inte ska gena vid korsningar)
@@ -44,68 +42,75 @@ public class BoardPlayerScript : MonoBehaviour
     private List<List<GameObject>> allRouteList;
 
     private int moveLength; //How many steps to move
-    
-    void Start()
-    {
+
+    private string standardDie;
+    private List<string> specialDieList;
+    private string[] diesToRoll;
+
+    public void SpawnCharacter(Gameboard gameboard, GameObject[] allSteps) {
+        this.gameboard = gameboard;
+        this.allSteps = allSteps;
+
         pathList = new List<GameObject>();
         nodeList = new List<Node>();
         stepList = new List<GameObject>();
         routeList = new List<GameObject>();
         allRouteList = new List<List<GameObject>>();
         choiceMarkerList = new List<GameObject>();
+        specialDieList = new List<string>();
+
+        standardDie = "do2"; //Id för vanlig d6 tärning
 
         boardCameraMovement = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BoardCameraMovement>();
+        dieManagerScript = GameObject.FindGameObjectWithTag("DieManager").GetComponent<DieManagerScript>();
 
-        playerNr = GetComponent<PlayerScript>().playerNr;
+
         cameraPos = new Vector3(0, 0, 0);
 
-        foreach (GameObject step in allSteps)
-        {
-            if (step.GetComponent<StepScript>().stepId == GetComponent<PlayerScript>().stepId)
-            {
+        foreach (GameObject step in allSteps) {
+            if (step.GetComponent<StepScript>().stepId == GetComponent<PlayerScript>().stepId) {
                 activeStep = step;
                 break;
             }
         }
         playerMove = PlayerMove.rollDie;
-    }
 
-    public void SpawnCharacter(Gameboard gameboard, GameObject[] allSteps)
-    {
-        this.gameboard = gameboard;
-        this.allSteps = allSteps;
         hasTarget = false;
     }
 
-    void Update()
-    {
-        if (isPlayerTurn)
-        {
-
-            switch (playerPhase)
-            {
+    void Update() {
+        if (isPlayerTurn) {
+            switch (playerPhase) {
                 case PlayerPhase.itemPhase:
                     //Check if use item or roll (or both)
                     //Debug.Log("Didn't use Item");
+                    boardCameraMovement.SetRollState();
+                    SendDies();
                     playerPhase = PlayerPhase.movePhase;
+                    
                     break;
                 case PlayerPhase.movePhase:
                     //Roll die and Move to next step
-                    switch (playerMove)
-                    {
+                    switch (playerMove) {
                         case PlayerMove.rollDie:
-                            RollDie();
+                            //boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
+                            
+                            if (!hasRolled) {
+                                RollDie();
+                            }
                             break;
                         case PlayerMove.getSteps:
+                            
                             GetTargetSteps();
                             break;
                         case PlayerMove.chooseRoute:
-                            if (boardCameraMovement.cameraState == BoardCameraMovement.CameraState.alterState)
-                            {
+                            
+                            if (boardCameraMovement.cameraState == BoardCameraMovement.CameraState.alterState) {
                                 ChooseStepPath();
                             }
                             break;
                         case PlayerMove.walk:
+                            
                             MoveOnBoard();
                             break;
                     }
@@ -125,31 +130,58 @@ public class BoardPlayerScript : MonoBehaviour
     }
 
     #region movePhase
-    public void RollDie() //Första som händer rullas tärningen
-    {
+    public void RollDie() {   //Första som händer rullas tärningen
+        if (playerNr <= 2) { //Har bara två kontroller, detta måste ändras sen
+            //string rollString = "Press x to roll dies";
+            if (Input.GetButtonDown(playerNr + "X")) {
+                dieManagerScript.RollDies();
+                hasRolled = true;
+            }
+        }
+        else {
+            dieManagerScript.RollDies();
+            hasRolled = true;
+        }
         
-        int dieRoll = Random.Range(1, 7); //Tar positionen den står på och lägger till tärningsslaget för att få fram nästa steg
-        moveLength = dieRoll;
-        playerMove = PlayerMove.getSteps;
-        gameboard.GetRoll("Rolled: " + dieRoll);
     }
 
-    private void GetTargetSteps() //Nästa som händer tar den fram de möjliga dragen
-    {
+    private void SendDies() {
+        if (specialDieList.Count > 0) {
+            //Specialträning aktiverad
+            diesToRoll = new string[1 + specialDieList.Count]; //Sätter storleken rätt
+            diesToRoll[0] = standardDie;
+
+            for (int i = 0; i < specialDieList.Count; i++) {
+                diesToRoll[i + 1] = specialDieList[0];
+            }
+
+        }
+        else {
+            diesToRoll = new string[1];
+            diesToRoll[0] = standardDie;
+        }
+        specialDieList.Clear();
+        dieManagerScript.GetDie(diesToRoll, this);
+    }
+    public void RollResult(int totalRoll) {
+        moveLength = totalRoll;
+        playerMove = PlayerMove.getSteps;
+    }
+
+    private void GetTargetSteps() {   //Nästa som händer tar den fram de möjliga dragen
         pathList.Add(activeStep);
         RecursiveStep(activeStep);
         ClearNodes();
         SpawnChoiceMarkers();
+
+        boardCameraMovement.AdjustMode();
         playerMove = PlayerMove.chooseRoute;
     }
 
-    private void SpawnChoiceMarkers()
-    {
+    private void SpawnChoiceMarkers() {
         choiceMarkerList = new List<GameObject>();
-        if (allRouteList.Count > 1)
-        {
-            foreach (List<GameObject> stepList in allRouteList)
-            {
+        if (allRouteList.Count > 1) {
+            foreach (List<GameObject> stepList in allRouteList) {
                 GameObject holder = Instantiate(ChoiceMarker);
                 holder.transform.SetParent(stepList[stepList.Count - 1].transform, false);
                 holder.transform.localPosition = new Vector3(0, 1, 0);
@@ -158,96 +190,90 @@ public class BoardPlayerScript : MonoBehaviour
         }
     }
 
-    private void ChooseStepPath() //Sen väljs vilken väg som kan gå
-    {
-        if (allRouteList.Count > 1)
-        {
-            if (playerNr >= 3) //Har bara två konroller denna bit måste ändras när vi är redo
-            {
+    private void ChooseStepPath() {   //Sen väljs vilken väg som kan gå
+        if (allRouteList.Count > 1) {
+            if (playerNr >= 3) {   //Har bara två konroller denna bit måste ändras när vi är redo
                 int rand = Random.Range(0, allRouteList.Count);
                 stepList = allRouteList[rand];
                 DestroyMarkers();
+                boardCameraMovement.PovMode();
                 playerMove = PlayerMove.walk;
-                boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
                 return;
             }
-            cameraPos = choiceMarkerList[choiceNr].transform.position;
-            cameraPos.x -= cameraOffset;
-            boardCameraMovement.GetTargetPos(cameraPos);
-            if (Input.GetButtonDown(playerNr+"R1"))
-            {
+
+            boardCameraMovement.GetStep(choiceMarkerList[choiceNr]); //Flyttar kameran till steget
+            boardCameraMovement.AdjustMode();
+
+            if (Input.GetButtonDown(playerNr + "R1")) {
                 choiceNr++;
-                if (choiceNr >= allRouteList.Count)
-                {
+                if (choiceNr >= allRouteList.Count) {
                     choiceNr = 0;
                 }
-            } else if (Input.GetButtonDown(playerNr + "L1"))
-            {
+            }
+            else if (Input.GetButtonDown(playerNr + "L1")) {
                 choiceNr--;
-                if (choiceNr < 0)
-                {
+                if (choiceNr < 0) {
                     choiceNr = allRouteList.Count - 1;
                 }
-            } else if (Input.GetButtonDown(playerNr + "X"))
-            {
+            }
+            else if (Input.GetButtonDown(playerNr + "X")) {
                 stepList = allRouteList[choiceNr];
-                DestroyMarkers();
+                
+                boardCameraMovement.GetPlayer(gameObject, playerNr);
+                boardCameraMovement.PovMode();
                 playerMove = PlayerMove.walk;
-                boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
+                DestroyMarkers();
+                //boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
             }
         }
-        else
-        {
+        else {
             stepList = allRouteList[0];
+
+            boardCameraMovement.GetPlayer(gameObject, playerNr);
+            boardCameraMovement.PovMode();
             playerMove = PlayerMove.walk;
-            boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
+            //boardCameraMovement.cameraState = BoardCameraMovement.CameraState.povState;
         }
     }
 
-    private void DestroyMarkers()
-    {
-        
-        foreach (GameObject marker in choiceMarkerList)
-        {
-            Destroy(marker.gameObject);
+    private void DestroyMarkers() {
+
+        foreach (GameObject marker in choiceMarkerList) {
+            Destroy(marker.gameObject); //Förstör kameran också!
         }
         choiceMarkerList.Clear();
-        
+
     }
 
-    private void MoveOnBoard() //Sen går karaktären den valda vägen
-    {
-        cameraPos = transform.position;
-        cameraPos.x -= 10;
-        boardCameraMovement.GetTargetPos(cameraPos);
+    private void MoveOnBoard() {   //Sen går karaktären den valda vägen
+        //cameraPos = transform.position;
+        //cameraPos.x -= 10;
+        //boardCameraMovement.GetTargetPos(cameraPos);
 
-        if (stepList.Count != 0)
-        {
+        if (stepList.Count != 0) {
 
             Vector3 targetPos = stepList[0].GetComponent<StepScript>().entryPointPos; //går mot första målet i listan
             transform.position = Vector3.MoveTowards(transform.position, targetPos, movementSpeed);
 
-            if (transform.position == targetPos) //Den har nått sin target!
-            {
+            if (transform.position == targetPos) {   //Den har nått sin target!
                 activeStep = stepList[0];
                 stepList.Remove(stepList[0]); //Ser till att den går till nästa target
                 //GetComponent<PlayerScript>().stepId = targetStep.GetComponent<StepScript>().stepId;
             }
         }
-        else //Den har gått till alla sina target (Den är färdig
-        {
+        else { //Den har gått till alla sina target (Den är färdig
             //targetStep.GetComponent<StepScript>().AddCharacter(gameObject);
             stepList.Clear();
+
+            boardCameraMovement.AdjustMode();
             playerPhase = PlayerPhase.eventPhase;
-            boardCameraMovement.cameraState = BoardCameraMovement.CameraState.alterState;
+            //boardCameraMovement.cameraState = BoardCameraMovement.CameraState.alterState;
         }
     }
 
-    private void RecursiveStep(GameObject step) //Går igenom trädet av möjliga vägar
-    {
+    private void RecursiveStep(GameObject step) { //Går igenom trädet av möjliga vägar
         //Debug.Log("Step: " + step.name);
-        if (!step.GetComponent<StepScript>().pathWayStep)
-        {
+        if (!step.GetComponent<StepScript>().pathWayStep) {
             pathList = new List<GameObject>();
             //Debug.Log(step.name + ": is not a pathway step");
         }
@@ -259,20 +285,16 @@ public class BoardPlayerScript : MonoBehaviour
             return;
         }
 
-        if (step.GetComponent<StepScript>().nextStep.Length > 1)
-        {
-            for (int i = 0; i < step.GetComponent<StepScript>().nextStep.Length; i++)
-            {
+        if (step.GetComponent<StepScript>().nextStep.Length > 1) {
+            for (int i = 0; i < step.GetComponent<StepScript>().nextStep.Length; i++) {
                 bool canAdd = true;
-                foreach (GameObject pastStep in pathList)
-                {
+                foreach (GameObject pastStep in pathList) {
                     if (step.GetComponent<StepScript>().nextStep[i].name == pastStep.name) //Om den redan har gått denna väg så ska den gå tillbaka
                     {
                         canAdd = false;
                     }
                 }
-                if (canAdd)
-                {
+                if (canAdd) {
                     moveLength--;
                     routeList.Add(step.GetComponent<StepScript>().nextStep[i]);
                     pathList.Add(step.GetComponent<StepScript>().nextStep[i]);
@@ -287,11 +309,9 @@ public class BoardPlayerScript : MonoBehaviour
 
             }
         }
-        else
-        {
+        else {
 
-            foreach (GameObject pastStep in pathList)
-            {
+            foreach (GameObject pastStep in pathList) {
                 //Debug.Log("Step: " + step.GetComponent<StepScript>().nextStep[0].name + "\npastStep: " + pastStep.name);
                 if (step.GetComponent<StepScript>().nextStep[0].name == pastStep.name) //Om den redan har gått denna väg så ska den gå tillbaka
                 {
@@ -303,13 +323,11 @@ public class BoardPlayerScript : MonoBehaviour
             pathList.Add(step.GetComponent<StepScript>().nextStep[0]);
             RecursiveStep(step.GetComponent<StepScript>().nextStep[0]);
 
-            if (step != activeStep)
-            {
+            if (step != activeStep) {
 
 
                 //Debug.Log("pathWayStep: " + step.GetComponent<StepScript>().pathWayStep);
-                if (step.GetComponent<StepScript>().pathWayStep)
-                {
+                if (step.GetComponent<StepScript>().pathWayStep) {
 
                     //pathList.Add(step);
 
@@ -319,20 +337,16 @@ public class BoardPlayerScript : MonoBehaviour
         }
     }
 
-    private void ClearNodes() //Fortsätter de grenar som finns
-    {
-        while (nodeList.Count > 0)
-        {
+    private void ClearNodes() { //Fortsätter de grenar som finns
+        while (nodeList.Count > 0) {
             //Debug.Log("-----New Step-----");
             routeList.Clear();
-            for (int i = 0; i < nodeList[0].path.Length; i++)
-            {
+            for (int i = 0; i < nodeList[0].path.Length; i++) {
                 routeList.Add(nodeList[0].path[i]);
             }
 
             pathList.Clear();
-            for (int i = 0; i < nodeList[0].noWayPath.Length; i++)
-            {
+            for (int i = 0; i < nodeList[0].noWayPath.Length; i++) {
                 pathList.Add(nodeList[0].noWayPath[i]);
             }
             moveLength = nodeList[0].moveLength;
@@ -346,22 +360,25 @@ public class BoardPlayerScript : MonoBehaviour
     #endregion
 
     #region TurnManager
-    public void GetTurn() //Det som händer när turen startar
-    {
+    public void GetTurn() { //Det som händer när turen startar
+        playerNr = GetComponent<PlayerScript>().playerNr;
         isPlayerTurn = true;
         hasTarget = false;
+        hasRolled = false;
         playerPhase = PlayerPhase.itemPhase;
         playerMove = PlayerMove.rollDie;
         targetStep = activeStep;
         choiceNr = 0;
+
+        boardCameraMovement.GetPlayer(transform.gameObject, playerNr);
+        boardCameraMovement.AdjustMode();
 
         gameboard.GetPlayerTurn("Player " + playerNr + "'s turn!");
         //routeList.Clear();
         //allRouteList.Clear();
     }
 
-    private void EndTurn() //Det som händer när turne tar slut
-    {
+    private void EndTurn() { //Det som händer när turne tar slut
         isPlayerTurn = false;
         hasTarget = false;
         gameboard.NextTurn();
@@ -370,28 +387,25 @@ public class BoardPlayerScript : MonoBehaviour
         allRouteList.Clear();
     }
     #endregion
+    
 }
 
-public class Node //Sparar de nodes som finns
-{ 
+public class Node { //Sparar de nodes som finns
     public int moveLength;
     public GameObject[] path, noWayPath;
 
     public static Node node;
 
-    public Node(int moveLength, List<GameObject> pathList, List<GameObject> noWayPathList)
-    {
+    public Node(int moveLength, List<GameObject> pathList, List<GameObject> noWayPathList) {
         this.moveLength = moveLength;
 
         path = new GameObject[pathList.Count];
-        for (int i = 0; i < pathList.Count; i++)
-        {
+        for (int i = 0; i < pathList.Count; i++) {
             path[i] = pathList[i];
         }
 
         noWayPath = new GameObject[noWayPathList.Count];
-        for (int i = 0; i < noWayPathList.Count; i++)
-        {
+        for (int i = 0; i < noWayPathList.Count; i++) {
             noWayPath[i] = noWayPathList[i];
         }
     }

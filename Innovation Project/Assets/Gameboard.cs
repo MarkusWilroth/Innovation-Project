@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using Step;
 using BoardCamera;
 
-public class Gameboard : MonoBehaviour
-{
+public class Gameboard : MonoBehaviour {
     public GameObject characterPrefab;
     public GameObject MainCamera;
     public Material testMat;
@@ -22,7 +21,7 @@ public class Gameboard : MonoBehaviour
     public float eventTimer;
     private float timer;
 
-    
+
 
     /*ToDo:
      * Fixa turns
@@ -31,17 +30,14 @@ public class Gameboard : MonoBehaviour
      * Fixa roation
      */
 
-    void Start()
-    {
+    void Start() {
         characterList = new List<GameObject>();
         playerTurn = 0;
         rollText.text = "";
 
         steps = GameObject.FindGameObjectsWithTag("Step");
-        foreach (GameObject step in steps)
-        {
-            if (step.GetComponent<StepScript>().stepType == StepType.startStep)
-            {
+        foreach (GameObject step in steps) {
+            if (step.GetComponent<StepScript>().stepType == StepType.startStep) {
                 startStep = step;
                 break;
             }
@@ -54,8 +50,7 @@ public class Gameboard : MonoBehaviour
 
             MainCamera.GetComponent<BoardCameraMovement>().cameraState = BoardCameraMovement.CameraState.introState;
 
-            for (int i = 1; i <= testCharacters; i++)
-            {
+            for (int i = 1; i <= testCharacters; i++) {
                 holder = Instantiate(characterPrefab);
                 holder.GetComponent<PlayerScript>().stepId = startStep.GetComponent<StepScript>().stepId;
                 holder.GetComponent<PlayerScript>().playerNr = i;
@@ -64,12 +59,11 @@ public class Gameboard : MonoBehaviour
                 startStep.GetComponent<StepScript>().AddCharacter(holder);
                 holder.GetComponent<PlayerScript>().CreateCharacter(i, testMat, testMat, testMat, testMat, "Test" + i);
             }
-            GetPLayerOrder();
-        } else
-        {
+            GetPlayerOrder();
+        }
+        else {
             MainCamera.GetComponent<BoardCameraMovement>().cameraState = BoardCameraMovement.CameraState.loadState; //Kommer behövas en bool i Scorescript
-            foreach (PlayerScript playerScript in ScoreScript.scoreScript.playerScripts)
-            {
+            foreach (PlayerScript playerScript in ScoreScript.scoreScript.playerScripts) {
                 holder = Instantiate(characterPrefab);
                 holder.GetComponent<PlayerScript>().LoadCharacter(playerScript.playerNr, playerScript.limb, playerScript.skin, playerScript.armor, playerScript.component, playerScript.strName);
                 holder.GetComponent<PlayerScript>().stepId = startStep.GetComponent<StepScript>().stepId;
@@ -81,24 +75,20 @@ public class Gameboard : MonoBehaviour
 
         characterOrder[playerTurn].GetComponent<BoardPlayerScript>().GetTurn();
     }
-    private void GetPLayerOrder()
-    {
+    private void GetPlayerOrder() {
         characterOrder = new GameObject[characterList.Count];
 
-        for (int i = 0; i < characterOrder.Length; i++)
-        {
+        for (int i = 0; i < characterOrder.Length; i++) {
             int rand = Random.Range(0, characterList.Count);
             characterOrder[i] = characterList[rand];
             characterList.Remove(characterList[rand]);
         }
-        
+
     }
 
-    public void NextTurn()
-    {
+    public void NextTurn() {
         playerTurn++;
-        if (playerTurn >= characterOrder.Length)
-        {
+        if (playerTurn >= characterOrder.Length) {
             //Start Minigame
             playerTurn = 0;
         }
@@ -107,22 +97,18 @@ public class Gameboard : MonoBehaviour
         characterOrder[playerTurn].GetComponent<BoardPlayerScript>().GetTurn();
     }
 
-    public void GetPlayerTurn(string playerTurn)
-    {
+    public void GetPlayerTurn(string playerTurn) {
         playerText.text = playerTurn;
     }
 
-    public void GetRoll(string eventString)
-    {
+    public void GetRoll(string eventString) {
         rollText.text = eventString;
         timer = 0;
     }
 
-    private void Update()
-    {
+    private void Update() {
         timer += Time.deltaTime;
-        if (timer >= eventTimer)
-        {
+        if (timer >= eventTimer) {
             rollText.text = "";
         }
     }
